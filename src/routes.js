@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Breadcrumbs = React.lazy(() => import('./views/Base/Breadcrumbs'));
+
 const Cards = React.lazy(() => import('./views/Base/Cards'));
 const Carousels = React.lazy(() => import('./views/Base/Carousels'));
 const Collapses = React.lazy(() => import('./views/Base/Collapses'));
@@ -30,8 +30,9 @@ const SimpleLineIcons = React.lazy(() => import('./views/Icons/SimpleLineIcons')
 const Alerts = React.lazy(() => import('./views/Notifications/Alerts'));
 const Badges = React.lazy(() => import('./views/Notifications/Badges'));
 const Modals = React.lazy(() => import('./views/Notifications/Modals'));
-const Colors = React.lazy(() => import('./views/Theme/Colors'));
-const Typography = React.lazy(() => import('./views/Theme/Typography'));
+const users = React.lazy(() => import('./views/Theme/Colors'));//chnaged this
+const orders = React.lazy(() => import('./views/Theme/Typography'));//changed this
+const sales = React.lazy(() => import('./views/Base/Breadcrumbs'));//changed this
 const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
@@ -40,16 +41,16 @@ const User = React.lazy(() => import('./views/Users/User'));
 const routes = [
   { path: '/', exact: true, name: 'Home' },
   { path: '/dashboard', name: 'Dashboard', component: Dashboard },
-  { path: '/theme', exact: true, name: 'Theme', component: Colors },
-  { path: '/theme/colors', name: 'Colors', component: Colors },
-  { path: '/theme/typography', name: 'Typography', component: Typography },
+  { path: '/users', exact: true, name: 'Theme', component: users },
+  { path: '/admin/users', name: 'Users', component: users },//changed this
+  { path: '/admin/orders', name: 'Orders', component: orders },//chnaged this
   { path: '/base', exact: true, name: 'Base', component: Cards },
   { path: '/base/cards', name: 'Cards', component: Cards },
   { path: '/base/forms', name: 'Forms', component: Forms },
   { path: '/base/switches', name: 'Switches', component: Switches },
   { path: '/base/tables', name: 'Tables', component: Tables },
   { path: '/base/tabs', name: 'Tabs', component: Tabs },
-  { path: '/base/breadcrumbs', name: 'Breadcrumbs', component: Breadcrumbs },
+  { path: '/admin/sales', name: 'Sales', component: sales },//changed this
   { path: '/base/carousels', name: 'Carousel', component: Carousels },
   { path: '/base/collapses', name: 'Collapse', component: Collapses },
   { path: '/base/dropdowns', name: 'Dropdowns', component: Dropdowns },

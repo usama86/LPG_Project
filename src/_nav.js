@@ -1,3 +1,4 @@
+
 export default {
   items: [
     {
@@ -6,10 +7,10 @@ export default {
       icon: 'icon-speedometer',
       badge: {
         variant: 'info',
-        text: 'NEW',
+       // text: 'NEW',
       },
     },
-    {
+    /*{
       title: true,
       name: 'Theme',
       wrapper: {            // optional wrapper object
@@ -17,36 +18,36 @@ export default {
         attributes: {}        // optional valid JS object with JS API naming ex: { className: "my-class", style: { fontFamily: "Verdana" }, id: "my-id"}
       },
       class: ''             // optional class names space delimited list for title item ex: "text-center"
+    },*/
+    {
+      name: 'Users',
+      url: '/admin/users',
+      icon: 'icon-user',
     },
     {
-      name: 'Colors',
-      url: '/theme/colors',
-      icon: 'icon-drop',
+      name: 'Orders',
+      url: '/admin/orders',
+      icon: 'icon-basket-loaded',
     },
-    {
-      name: 'Typography',
-      url: '/theme/typography',
-      icon: 'icon-pencil',
-    },
-    {
+    /*{
       title: true,
       name: 'Components',
       wrapper: {
         element: '',
         attributes: {},
       },
-    },
-    {
-      name: 'Base',
-      url: '/base',
-      icon: 'icon-puzzle',
-      children: [
+    },*/
+   // {
+     // name: 'Base',
+      //url: '/base',
+      //icon: 'icon-puzzle',
+      //children: [
         {
-          name: 'Breadcrumbs',
-          url: '/base/breadcrumbs',
-          icon: 'icon-puzzle',
+          name: 'Sales',
+          url: '/admin/sales',
+          icon: 'icon-wallet',
         },
-        {
+        /*{
           name: 'Cards',
           url: '/base/cards',
           icon: 'icon-puzzle',
@@ -121,8 +122,8 @@ export default {
           url: '/base/tooltips',
           icon: 'icon-puzzle',
         },
-      ],
-    },
+     // ],
+    //},
     {
       name: 'Buttons',
       url: '/buttons',
@@ -155,7 +156,7 @@ export default {
       url: '/charts',
       icon: 'icon-pie-chart',
     },
-    {
+   /* {
       name: 'Icons',
       url: '/icons',
       icon: 'icon-star',
@@ -189,7 +190,7 @@ export default {
           icon: 'icon-star',
         },
       ],
-    },
+    },*/
     {
       name: 'Notifications',
       url: '/notifications',
@@ -212,7 +213,7 @@ export default {
         },
       ],
     },
-    {
+    /*{
       name: 'Widgets',
       url: '/widgets',
       icon: 'icon-calculator',
@@ -220,19 +221,19 @@ export default {
         variant: 'info',
         text: 'NEW',
       },
-    },
+    },*/
     {
       divider: true,
     },
-    {
+    /*{
       title: true,
       name: 'Extras',
-    },
-    {
-      name: 'Pages',
-      url: '/pages',
-      icon: 'icon-star',
-      children: [
+    },*/
+    //{
+      //name: 'Pages',
+      //url: '/pages',
+     // icon: 'icon-star',
+     // children: [
         {
           name: 'Login',
           url: '/login',
@@ -243,7 +244,7 @@ export default {
           url: '/register',
           icon: 'icon-star',
         },
-        {
+        /*{
           name: 'Error 404',
           url: '/404',
           icon: 'icon-star',
@@ -252,16 +253,16 @@ export default {
           name: 'Error 500',
           url: '/500',
           icon: 'icon-star',
-        },
-      ],
-    },
-    {
+        },*/
+     // ],
+   // },
+    /*{
       name: 'Disabled',
       url: '/dashboard',
       icon: 'icon-ban',
       attributes: { disabled: true },
-    },
-    {
+    },*/
+    /*{
       name: 'Download CoreUI',
       url: 'https://coreui.io/react/',
       icon: 'icon-cloud-download',
@@ -275,6 +276,6 @@ export default {
       icon: 'icon-layers',
       variant: 'danger',
       attributes: { target: '_blank', rel: "noopener" },
-    },
+    },*/
   ],
 };
