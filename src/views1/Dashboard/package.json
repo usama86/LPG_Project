@@ -1,0 +1,6 @@
+{
+	"name": "DashboardDistributor",
+	"version": "0.0.0",
+	"private": true,
+	"main": "./DashboardDist.js"
+}
