@@ -2,7 +2,7 @@ export default {
 	items: [
 		{
 			name: 'Dashboard',
-			url: '/dashboard',
+			url: '/distributor/dashboard',
 			icon: 'icon-speedometer',
 			badge: {
 				variant: 'info'
@@ -19,13 +19,13 @@ export default {
       class: ''             // optional class names space delimited list for title item ex: "text-center"
     },*/
 		{
-			name: 'Users',
-			url: '/admin/users',
+			name: 'Profile',
+			url: '/distributor/users',
 			icon: 'icon-user'
 		},
 		{
-			name: 'Orders',
-			url: '/admin/orders',
+			name: 'Inventory',
+			url: '/distributor/orders',
 			icon: 'icon-basket-loaded'
 		},
 		/*{
@@ -42,10 +42,21 @@ export default {
 		//icon: 'icon-puzzle',
 		//children: [
 		{
-			name: 'Sales',
-			url: '/admin/sales',
+			name: 'Sales Report',
+			url: '/distributor/sales',
 			icon: 'icon-wallet'
 		},
+		{
+			name: 'Orders',
+			url: '/distributor/orders',
+			icon: 'icon-wallet'
+		},
+		{
+			name: 'Payment To Company',
+			url: '/distributor/paymentToCompany',
+			icon: 'icon-wallet'
+		},
+
 		/*{
           name: 'Cards',
           url: '/base/cards',
@@ -146,7 +157,7 @@ export default {
         {
           name: 'Brand Buttons',
           url: '/buttons/brand-buttons',
-          icon: 'icon-cursor', 
+          icon: 'icon-cursor',
         },
       ],
     },
