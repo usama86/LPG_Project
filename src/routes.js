@@ -36,12 +36,13 @@ const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 
-const DistributorDash = React.lazy(() => import('./viewsDistributor/Dashboard'));
+const DistributorDash = React.lazy(() => import('./viewsDistributor/Dashboard/Dashboard'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
 	{ path: '/', exact: true, name: 'Home' },
-	{ path: '/dashboardDist', name: 'Dashboard', component: DistributorDash },
+	{ path: '/distributor/dashboard', name: 'Dashboard', component: DistributorDash },
+
 	{ path: '/Dashboard', name: 'Dashboard', component: Dashboard },
 
 	{ path: '/users', exact: true, name: 'Theme', component: users },

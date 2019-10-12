@@ -13,13 +13,15 @@ class Customer extends Component {
 								<button
 									onClick={() => {
 										this.props.history.push('/dashboard');
+										localStorage.setItem('UserType', 'Admin');
 									}}
 								>
 									GO to ADMIN
 								</button>
 								<button
 									onClick={() => {
-										this.props.history.push('/dashboardDist');
+										this.props.history.push('/distributor/dashboard');
+										localStorage.setItem('UserType', 'Vendor');
 									}}
 								>
 									Go TO VENDOR
