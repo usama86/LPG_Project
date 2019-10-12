@@ -3,44 +3,89 @@ import ReactDOM from 'react-dom';
 import classNames from 'classnames';
 import { Row, Col } from 'reactstrap'
 import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities'
+import MaterialTable from 'material-table';
 
-class ThemeView extends Component {
-  constructor(props) {
-    super(props);
+class users extends Component {
+ state = {
 
-    this.state = {
-      bgColor: 'rgb(255, 255, 255)'
-    }
-  }
+  columns: [
+    { title: 'First Name', field: 'fname' },
+    { title: 'Last Name', field: 'surname' },
+    { title: 'Email', field: 'email' },
+    { title: 'Password', field: 'password' },
+    { title: 'Phone no', field: 'phoneno', type: 'numeric' },
+    { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
+    
+  ],
+  data: [
+   
+    {
+      fname: 'Zerya Betül',
+      surname: 'Baran',
+      email:'zeryan@gmail.com',
+      password:'zeryan123',
+      phoneno:'051-2642148',
+      birthYear: 1999,
+      birthCity: 34,
+    },
+    {
+      fname: 'Ahsan',
+      surname: 'Farooq',
+      email:'ahsan@gmail.com',
+      password:'ahsan123',
+      phoneno:'051-5942178',
+      birthYear: 1997,
+      
+    },
+  ],
 
-  componentDidMount () {
-    const elem = ReactDOM.findDOMNode(this).parentNode.firstChild
-    const color = window.getComputedStyle(elem).getPropertyValue('background-color')
-    this.setState({
-      bgColor: color || this.state.bgColor
-    })
-  }
+ }
 
   render() {
 
     return (
-      <table className="w-100">
-        <tbody>
-        <tr>
-          <td className="text-muted">HEX:</td>
-          <td className="font-weight-bold">{ rgbToHex(this.state.bgColor) }</td>
-        </tr>
-        <tr>
-          <td className="text-muted">RGB:</td>
-          <td className="font-weight-bold">{ this.state.bgColor }</td>
-        </tr>
-        </tbody>
-      </table>
+      <div> 
+              <MaterialTable
+              title="Editable Example"
+              columns={this.state.columns}
+              data={this.state.data}
+              editable={{
+                onRowAdd: newData =>
+                  new Promise(resolve => {
+                    setTimeout(() => {
+                      resolve();
+                      const data = [...this.state.data];
+                      data.push(newData);
+                     this.setState({ ...this.state, data });
+                    }, 600);
+                  }),
+                onRowUpdate: (newData, oldData) =>
+                  new Promise(resolve => {
+                    setTimeout(() => {
+                      resolve();
+                      const data = [...this.state.data];
+                      data[data.indexOf(oldData)] = newData;
+                      this.setState({ ...this.state, data });
+                    }, 600);
+                  }),
+                onRowDelete: oldData =>
+                  new Promise(resolve => {
+                    setTimeout(() => {
+                      resolve();
+                      const data = [...this.state.data];
+                      data.splice(data.indexOf(oldData), 1);
+                      this.setState({ ...this.state, data });
+                    }, 600);
+                  }),
+              }}
+            />
+    </div>
     )
   }
 }
+export default users;
 
-class ThemeColor extends Component {
+/*class ThemeColor extends Component {
   // constructor(props) {
   //   super(props);
   // }
@@ -179,6 +224,6 @@ class Colors extends Component {
       </div>
     );
   }
-}
+}*/
 
-export default Colors;
+
