@@ -42,12 +42,10 @@ const CustomerDist = React.lazy(() => import('./views2/Dashboard/DashboardCust')
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
-	{ path: '/dashboardDist', name: 'Dashboard', component: DashboardDist },
-
-	{ path: '/dashboardCust', name: 'Dashboard', component: CustomerDist },
-
-	{ path: '/', exact: true, name: 'Home' },
-	{ path: '/dashboard', name: 'Dashboard', component: Dashboard },
+	{ path: '/', exact: true, name: 'Home2' },
+	{ path: '/dashboard', exact: true, name: 'Dashboard', component: Dashboard },
+	{ path: '/dashboardDist', exact: true, name: 'Dashboard2', component: DashboardDist },
+	{ path: '/dashboardCust', exact: true, name: 'Dashboard1', component: CustomerDist },
 	{ path: '/theme', exact: true, name: 'Theme', component: Colors },
 	{ path: '/theme/colors', name: 'Colors', component: Colors },
 	{ path: '/theme/typography', name: 'Typography', component: Typography },

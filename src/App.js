@@ -14,6 +14,7 @@ const Register = React.lazy(() => import('./views/Pages/Register'));
 const Page404 = React.lazy(() => import('./views/Pages/Page404'));
 const Page500 = React.lazy(() => import('./views/Pages/Page500'));
 const CustomerSide = React.lazy(() => import('./views2/Dashboard/DashboardCust'));
+const VendorSide = React.lazy(() => import('./containers/DefaultLayoutVendor'));
 
 class App extends Component {
 	//making customer panel
@@ -31,8 +32,9 @@ class App extends Component {
 						/>
 						<Route exact path="/404" name="Page 404" render={(props) => <Page404 {...props} />} />
 						<Route exact path="/500" name="Page 500" render={(props) => <Page500 {...props} />} />
-						<Route path="/" name="Home" render={(props) => <CustomerSide {...props} />} />
-						<Route path="/abc" name="Home" render={(props) => <DefaultLayout {...props} />} />
+
+						<Route path="/adminside" exact name="Home" render={(props) => <DefaultLayout {...props} />} />
+						<Route path="/" name="Home2" exact render={(props) => <CustomerSide {...props} />} />
 					</Switch>
 				</React.Suspense>
 			</HashRouter>

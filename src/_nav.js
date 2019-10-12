@@ -10,6 +10,15 @@ export default {
       },
     },
     {
+			name: 'DashboardDist',
+			url: '/dashboardDist',
+			icon: 'icon-speedometer',
+			badge: {
+				variant: 'info',
+				text: 'NEW'
+			}
+		},
+    {
       title: true,
       name: 'Theme',
       wrapper: {            // optional wrapper object
