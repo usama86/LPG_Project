@@ -25,7 +25,7 @@ export default {
 		},
 		{
 			name: 'Inventory',
-			url: '/distributor/orders',
+			url: '/distributor/Inventory',
 			icon: 'icon-basket-loaded'
 		},
 		/*{

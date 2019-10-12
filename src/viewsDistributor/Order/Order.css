@@ -1,0 +1,12 @@
+.MuiTableSortLabel-root:hover {
+	color: #20a8d8 !important;
+}
+.MuiTableSortLabel-root:active {
+	color: #20a8d8 !important;
+}
+.MuiTableSortLabel-root:focus {
+	color: #20a8d8 !important;
+}
+.MuiTableCell-body:hover {
+	color: #20a8d8 !important;
+}

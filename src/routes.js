@@ -36,14 +36,26 @@ const Widgets = React.lazy(() => import('./views/Widgets/Widgets'));
 const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 
-//const DistributorDash = React.lazy(() => import('./viewsDistributor/Dashboard'));
+const DistributorDash = React.lazy(() => import('./viewsDistributor/Dashboard/Dashboard'));
+const DistributorInven = React.lazy(() => import('./viewsDistributor/Inventory/Inventory'));
+const DistributorOrder = React.lazy(() => import('./viewsDistributor/Order/Order'));
+const DistributorProfile = React.lazy(() => import('./viewsDistributor/Profile/Profile'));
+const DistributorSalesReport = React.lazy(() => import('./viewsDistributor/SalesReport/SalesReport'));
+const DistributorPTC = React.lazy(() => import('./viewsDistributor/PaymentToCompany/PTC'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
 	{ path: '/', exact: true, name: 'Home' },
-	//{ path: '/dashboardDist', name: 'Dashboard', component: DistributorDash },
-	{ path: '/Dashboard', name: 'Dashboard', component: Dashboard },
 
+	{ path: '/distributor/dashboard', name: 'Dashboard', component: DistributorDash },
+	{ path: '/distributor/Inventory', name: 'Dashboard Inventory', component: DistributorInven },
+	{ path: '/distributor/orders', name: 'Distributor Order', component: DistributorOrder },
+
+	{ path: '/distributor/users', name: 'Profile', component: DistributorProfile },
+	{ path: '/distributor/sales', name: 'Sales Report', component: DistributorSalesReport },
+	{ path: '/distributor/paymentToCompany', name: 'Payment To Company', component: DistributorPTC },
+
+	{ path: '/Dashboard', name: 'Dashboard', component: Dashboard },
 	{ path: '/users', exact: true, name: 'Theme', component: users },
 	{ path: '/admin/users', name: 'Users', component: users }, //changed this
 	{ path: '/admin/orders', name: 'Orders', component: orders }, //changed this
