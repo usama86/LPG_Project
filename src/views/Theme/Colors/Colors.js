@@ -4,18 +4,43 @@ import classNames from 'classnames';
 import { Row, Col } from 'reactstrap'
 import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities'
 import MaterialTable from 'material-table';
+import  './Colors.css';
 
 class users extends Component {
  state = {
 
   columns: [
-    { title: 'First Name', field: 'fname' },
-    { title: 'Last Name', field: 'surname' },
-    { title: 'Email', field: 'email' },
-    { title: 'Password', field: 'password' },
-    { title: 'Phone no', field: 'phoneno', type: 'numeric' },
-    { title: 'Birth Year', field: 'birthYear', type: 'numeric' },
-    
+    { title: 'First Name', field: 'fname',cellStyle: {
+              
+                  color: 'white'
+              }, },
+    { title: 'Last Name', field: 'surname',cellStyle: {
+                
+                  color: 'white'
+              }, },
+    { title: 'Email', field: 'email',cellStyle: {
+     
+                  color: 'white'
+              }, },
+    { title: 'Password', field: 'password',cellStyle: {
+   
+                  color: 'white'
+              }, },
+    { title: 'Phone no', field: 'phoneno', type: 'numeric',cellStyle: {
+     
+                  color: 'white'
+              }, },
+    { title: 'Birth Year', field: 'birthYear', type: 'numeric',cellStyle: {
+     
+                  color: 'white'
+              }, },
+    { title: 'Registered date', field: 'rd',cellStyle: {
+  
+                  color: 'white'
+              }, },
+    { title: 'ActiveStatus', field: 'status',cellStyle: {
+                  color: 'white'
+              }, },
   ],
   data: [
    
@@ -27,6 +52,8 @@ class users extends Component {
       phoneno:'051-2642148',
       birthYear: 1999,
       birthCity: 34,
+      rd : '2019-5-14',
+      status : 'Yes'
     },
     {
       fname: 'Ahsan',
@@ -35,6 +62,8 @@ class users extends Component {
       password:'ahsan123',
       phoneno:'051-5942178',
       birthYear: 1997,
+      rd : '2017-2-2',
+      status : 'Yes'
       
     },
   ],
@@ -46,9 +75,47 @@ class users extends Component {
     return (
       <div> 
               <MaterialTable
-              title="Editable Example"
+              title="Users"
               columns={this.state.columns}
               data={this.state.data}
+              style={{backgroundColor:"rgba(47,53,58,0.2)",fontWeight:'bold'}}
+              options={{
+                pageSize: 10,
+                headerStyle: {
+                  backgroundColor: '#18262E',
+                  color:"white"
+                },
+                searchFieldStyle:{
+                    color:"black",
+                   // background:"green !important",
+                    paddingTop:"1%"
+                },
+                searchFieldAlignment:"right",
+                rowStyle:x => {
+                    if (x.tableData.id % 2) {
+                        return {backgroundColor: "#18262E",cursor:"pointer"}
+                    }
+                    else{
+                        return {backgroundColor: "#24343d",cursor:"pointer"}
+                    }
+                },
+                actionsCellStyle:{
+                    display:'none'
+                },
+                actionsColumnIndex:{
+                    display:'none'
+                },
+                cellStyle:{
+                    color:"white"
+                },
+                filterCellStyle:{
+                    color:"white"
+                },
+                paginationType:{
+                    color:"white"
+                },
+
+              }}
               editable={{
                 onRowAdd: newData =>
                   new Promise(resolve => {
