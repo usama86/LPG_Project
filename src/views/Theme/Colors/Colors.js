@@ -1,13 +1,19 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import classNames from 'classnames';
-import { Row, Col } from 'reactstrap'
-import { rgbToHex } from '@coreui/coreui/dist/js/coreui-utilities'
-import MaterialTable from 'material-table';
-import  './Colors.css';
+import MaterialTable from 'material-table'
+import  './Colors.css'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
+
 
 class users extends Component {
  state = {
+  
+  ModalTitle:'',
+  userName:'',
+  userType:'',
+  userStatus:'',
+  modal:false,
 
   columns: [
     { title: 'First Name', field: 'fname',cellStyle: {
@@ -38,14 +44,17 @@ class users extends Component {
   
                   color: 'white'
               }, },
-    { title: 'ActiveStatus', field: 'status',cellStyle: {
+    { title: 'Active Status', field: 'status',cellStyle: {
                   color: 'white'
               }, },
+    { title: 'Type', field: 'type',cellStyle: {
+                color: 'white'
+            }, },
   ],
   data: [
    
     {
-      fname: 'Zerya Betül',
+      fname: 'Zerya',
       surname: 'Baran',
       email:'zeryan@gmail.com',
       password:'zeryan123',
@@ -53,7 +62,8 @@ class users extends Component {
       birthYear: 1999,
       birthCity: 34,
       rd : '2019-5-14',
-      status : 'Yes'
+      status : 'Approved',
+      type:'Distributor'
     },
     {
       fname: 'Ahsan',
@@ -63,18 +73,124 @@ class users extends Component {
       phoneno:'051-5942178',
       birthYear: 1997,
       rd : '2017-2-2',
-      status : 'Yes'
+      status : 'Not Approved',
+      type:'Customer'
+      
+    },
+    {
+      fname: 'Usama',
+      surname: 'Amjad',
+      email:'usama@gmail.com',
+      password:'usama123',
+      phoneno:'051-5952178',
+      birthYear: 1995,
+      rd : '2017-2-1',
+      status : 'Approved',
+      type:'Customer'
+      
+    },
+    {
+      fname: 'Raheel',
+      surname: 'Tariq',
+      email:'raheel@gmail.com',
+      password:'raheel123',
+      phoneno:'051-5972178',
+      birthYear: 1996,
+      rd : '2017-8-1',
+      status : 'Not Approved',
+      type:'Distributor'
       
     },
   ],
+  
 
  }
+ 
+  toggle=(row,columns,event)=>{
+
+    console.log(row);
+    console.log(columns);
+    console.log(event);
+    //         alert(row);
+   // console.log(columns.latestPost);
+    //console.log(columns._id);
+      this.setState({userName:columns.fname,userType:columns.type,userStatus:columns.status})
+      var x=this.state.modal
+      this.setState({modal:!x})  
+
+  }
+
+  cancelModal = ()=>{
+    var x=this.state.modal
+    this.setState({modal:!x})
+  } 
+
+
+
+
+
+
+
+
 
   render() {
 
+let showbutton;
+    if(this.state.userType==='Customer' && this.state.userStatus==='Approved' )
+    {
+      showbutton = (
+        <div>
+          
+          <Button color="danger"  > Ban</Button>
+          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
+
+        </div>
+        
+      )
+    }
+    else if(this.state.userType==='Customer' && this.state.userStatus==='Not Approved' )
+    {
+      showbutton = (
+        <div>
+          <Button color="primary" > Approve</Button>
+          <Button color="danger"  > Ban</Button>
+          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
+
+        </div>
+        
+      )
+    }
+    else if(this.state.userType==='Distributor' && this.state.userStatus==='Approved' ){
+      showbutton = (
+        <div>
+          <Button color="danger"  > Ban</Button>
+          <Button color="success" >Generate invoice</Button>
+          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
+        </div>
+        
+      )
+    }
+    else if(this.state.userType==='Distributor' && this.state.userStatus==='Not Approved' ){
+
+      showbutton = (
+        <div>
+          <Button color="primary" > Approve</Button>
+          <Button color="danger"  > Ban</Button>
+          <Button color="success" >Generate invoice</Button>
+          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
+        </div>
+        
+      )
+
+    }
+
+  
+
     return (
       <div> 
+       
               <MaterialTable
+              onRowClick={this.toggle}
               title="Users"
               columns={this.state.columns}
               data={this.state.data}
@@ -146,6 +262,19 @@ class users extends Component {
                   }),
               }}
             />
+
+        <Modal isOpen={this.state.modal} toggle={this.toggle} >
+        <ModalHeader toggle={this.cancelModal}>{this.state.userName}</ModalHeader>
+        <ModalBody>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </ModalBody>
+        <ModalFooter>
+         
+           {showbutton}
+
+        </ModalFooter>
+      </Modal>
+
     </div>
     )
   }
