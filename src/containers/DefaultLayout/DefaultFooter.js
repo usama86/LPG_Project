@@ -2,24 +2,25 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 const propTypes = {
-  children: PropTypes.node,
+	children: PropTypes.node
 };
 
 const defaultProps = {};
 
 class DefaultFooter extends Component {
-  render() {
+	render() {
+		// eslint-disable-next-line
+		const { children, ...attributes } = this.props;
 
-    // eslint-disable-next-line
-    const { children, ...attributes } = this.props;
-
-    return (
-      <React.Fragment>
-        {/*<span><a href="https://coreui.io">CoreUI</a> &copy; 2019 creativeLabs.</span>*/}
-        <span className="ml-auto">Developed by <a>Ahsan Farooq & Usama Amjad</a></span>
-      </React.Fragment>
-    );
-  }
+		return (
+			<React.Fragment>
+				{/*<span><a href="https://coreui.io">CoreUI</a> &copy; 2019 creativeLabs.</span>*/}
+				<span className="ml-auto">
+					Developed by <a>Futuristic Developers</a>
+				</span>
+			</React.Fragment>
+		);
+	}
 }
 
 DefaultFooter.propTypes = propTypes;

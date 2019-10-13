@@ -1,283 +1,222 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import MaterialTable from 'material-table'
-import  './PTC.css'
+import MaterialTable from 'material-table';
+import './PTC.css';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 
-
-
 class PTC extends Component {
- state = {
-  
-  ModalTitle:'',
-  userName:'',
-  userType:'',
-  userStatus:'',
-  modal:false,
+	state = {
+		ModalTitle: '',
+		userName: '',
+		userType: '',
+		userStatus: '',
+		modal: false,
 
-  columns: [
-    { title: 'First Name', field: 'fname',cellStyle: {
-              
-                  color: 'white'
-              }, },
-    { title: 'Last Name', field: 'surname',cellStyle: {
-                
-                  color: 'white'
-              }, },
-    { title: 'Email', field: 'email',cellStyle: {
-     
-                  color: 'white'
-              }, },
-    { title: 'Password', field: 'password',cellStyle: {
-   
-                  color: 'white'
-              }, },
-    { title: 'Phone no', field: 'phoneno', type: 'numeric',cellStyle: {
-     
-                  color: 'white'
-              }, },
-    { title: 'Birth Year', field: 'birthYear', type: 'numeric',cellStyle: {
-     
-                  color: 'white'
-              }, },
-    { title: 'Registered date', field: 'rd',cellStyle: {
-  
-                  color: 'white'
-              }, },
-    { title: 'Active Status', field: 'status',cellStyle: {
-                  color: 'white'
-              }, },
-    { title: 'Type', field: 'type',cellStyle: {
-                color: 'white'
-            }, },
-  ],
-  data: [
-   
-    {
-      fname: 'Zerya',
-      surname: 'Baran',
-      email:'zeryan@gmail.com',
-      password:'zeryan123',
-      phoneno:'051-2642148',
-      birthYear: 1999,
-      birthCity: 34,
-      rd : '2019-5-14',
-      status : 'Approved',
-      type:'Distributor'
-    },
-    {
-      fname: 'Ahsan',
-      surname: 'Farooq',
-      email:'ahsan@gmail.com',
-      password:'ahsan123',
-      phoneno:'051-5942178',
-      birthYear: 1997,
-      rd : '2017-2-2',
-      status : 'Not Approved',
-      type:'Customer'
-      
-    },
-    {
-      fname: 'Usama',
-      surname: 'Amjad',
-      email:'usama@gmail.com',
-      password:'usama123',
-      phoneno:'051-5952178',
-      birthYear: 1995,
-      rd : '2017-2-1',
-      status : 'Approved',
-      type:'Customer'
-      
-    },
-    {
-      fname: 'Raheel',
-      surname: 'Tariq',
-      email:'raheel@gmail.com',
-      password:'raheel123',
-      phoneno:'051-5972178',
-      birthYear: 1996,
-      rd : '2017-8-1',
-      status : 'Not Approved',
-      type:'Distributor'
-      
-    },
-  ],
-  
+		columns: [
+			{
+				title: 'Order ID',
+				field: 'oid',
+				type: 'numeric',
+				cellStyle: {
+					color: 'white'
+				}
+			},
 
- }
- 
-  toggle=(row,columns,event)=>{
+			{
+				title: 'Amount Recieved',
+				field: 'Arecieved',
+				type: 'numeric',
+				cellStyle: {
+					color: 'white'
+				}
+			},
+			{
+				title: 'Pay To Company',
+				field: 'ptc',
+				type: 'numeric',
+				cellStyle: {
+					color: 'white'
+				}
+			},
+			{
+				title: 'date',
+				field: 'rd',
+				cellStyle: {
+					color: 'white'
+				}
+			}
+		],
+		data: [
+			{
+				oid: 1,
+				Arecieved: 500,
+				ptc: 200,
+				rd: '4/5/2019'
+			},
+			{
+				oid: 2,
+				Arecieved: 700,
+				ptc: 100,
+				rd: '14/6/2019'
+			},
+			{
+				oid: 3,
+				Arecieved: 1500,
+				ptc: 1200,
+				rd: '22/6/2019'
+			},
+			{
+				oid: 4,
+				Arecieved: 5500,
+				ptc: 2300,
+				rd: '24/2/2019'
+			}
+		]
+	};
 
-    console.log(row);
-    console.log(columns);
-    console.log(event);
-    //         alert(row);
-   // console.log(columns.latestPost);
-    //console.log(columns._id);
-      this.setState({userName:columns.fname,userType:columns.type,userStatus:columns.status})
-      var x=this.state.modal
-      this.setState({modal:!x})  
+	toggle = (row, columns, event) => {
+		console.log(row);
+		console.log(columns);
+		console.log(event);
+		//         alert(row);
+		// console.log(columns.latestPost);
+		//console.log(columns._id);
+		this.setState({ userName: columns.fname, userType: columns.type, userStatus: columns.status });
+		var x = this.state.modal;
+		this.setState({ modal: !x });
+	};
 
-  }
+	cancelModal = () => {
+		var x = this.state.modal;
+		this.setState({ modal: !x });
+	};
 
-  cancelModal = ()=>{
-    var x=this.state.modal
-    this.setState({modal:!x})
-  } 
+	render() {
+		let showbutton;
+		if (this.state.userType === 'Customer' && this.state.userStatus === 'Approved') {
+			showbutton = (
+				<div>
+					<Button color="danger"> Ban</Button>
+					<Button color="secondary" onClick={this.cancelModal}>
+						Cancel
+					</Button>
+				</div>
+			);
+		} else if (this.state.userType === 'Customer' && this.state.userStatus === 'Not Approved') {
+			showbutton = (
+				<div>
+					<Button color="primary"> Approve</Button>
+					<Button color="danger"> Ban</Button>
+					<Button color="secondary" onClick={this.cancelModal}>
+						Cancel
+					</Button>
+				</div>
+			);
+		} else if (this.state.userType === 'Distributor' && this.state.userStatus === 'Approved') {
+			showbutton = (
+				<div>
+					<Button color="danger"> Ban</Button>
+					<Button color="success">Generate invoice</Button>
+					<Button color="secondary" onClick={this.cancelModal}>
+						Cancel
+					</Button>
+				</div>
+			);
+		} else if (this.state.userType === 'Distributor' && this.state.userStatus === 'Not Approved') {
+			showbutton = (
+				<div>
+					<Button color="primary"> Approve</Button>
+					<Button color="danger"> Ban</Button>
+					<Button color="success">Generate invoice</Button>
+					<Button color="secondary" onClick={this.cancelModal}>
+						Cancel
+					</Button>
+				</div>
+			);
+		}
 
+		return (
+			<div>
+				<MaterialTable
+					onRowClick={this.toggle}
+					title="Users"
+					columns={this.state.columns}
+					data={this.state.data}
+					style={{ backgroundColor: 'rgba(47,53,58,0.2)', fontWeight: 'bold' }}
+					options={{
+						pageSize: 10,
+						headerStyle: {
+							backgroundColor: '#18262E',
+							color: 'white'
+						},
+						searchFieldStyle: {
+							color: 'black',
+							// background:"green !important",
+							paddingTop: '1%'
+						},
+						searchFieldAlignment: 'right',
+						rowStyle: (x) => {
+							if (x.tableData.id % 2) {
+								return { backgroundColor: '#18262E', cursor: 'pointer' };
+							} else {
+								return { backgroundColor: '#24343d', cursor: 'pointer' };
+							}
+						},
+						actionsCellStyle: {
+							display: 'none'
+						},
+						actionsColumnIndex: {
+							display: 'none'
+						},
+						cellStyle: {
+							color: 'white'
+						},
+						filterCellStyle: {
+							color: 'white'
+						},
+						paginationType: {
+							color: 'white'
+						}
+					}}
+					editable={{
+						onRowAdd: (newData) =>
+							new Promise((resolve) => {
+								setTimeout(() => {
+									resolve();
+									const data = [ ...this.state.data ];
+									data.push(newData);
+									this.setState({ ...this.state, data });
+								}, 600);
+							}),
+						onRowUpdate: (newData, oldData) =>
+							new Promise((resolve) => {
+								setTimeout(() => {
+									resolve();
+									const data = [ ...this.state.data ];
+									data[data.indexOf(oldData)] = newData;
+									this.setState({ ...this.state, data });
+								}, 600);
+							}),
+						onRowDelete: (oldData) =>
+							new Promise((resolve) => {
+								setTimeout(() => {
+									resolve();
+									const data = [ ...this.state.data ];
+									data.splice(data.indexOf(oldData), 1);
+									this.setState({ ...this.state, data });
+								}, 600);
+							})
+					}}
+				/>
 
-
-
-
-
-
-
-
-  render() {
-
-let showbutton;
-    if(this.state.userType==='Customer' && this.state.userStatus==='Approved' )
-    {
-      showbutton = (
-        <div>
-          
-          <Button color="danger"  > Ban</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-
-        </div>
-        
-      )
-    }
-    else if(this.state.userType==='Customer' && this.state.userStatus==='Not Approved' )
-    {
-      showbutton = (
-        <div>
-          <Button color="primary" > Approve</Button>
-          <Button color="danger"  > Ban</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-
-        </div>
-        
-      )
-    }
-    else if(this.state.userType==='Distributor' && this.state.userStatus==='Approved' ){
-      showbutton = (
-        <div>
-          <Button color="danger"  > Ban</Button>
-          <Button color="success" >Generate invoice</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-        </div>
-        
-      )
-    }
-    else if(this.state.userType==='Distributor' && this.state.userStatus==='Not Approved' ){
-
-      showbutton = (
-        <div>
-          <Button color="primary" > Approve</Button>
-          <Button color="danger"  > Ban</Button>
-          <Button color="success" >Generate invoice</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-        </div>
-        
-      )
-
-    }
-
-  
-
-    return (
-      <div> 
-       <span> INVENTORY </span>
-              <MaterialTable
-              onRowClick={this.toggle}
-              title="Users"
-              columns={this.state.columns}
-              data={this.state.data}
-              style={{backgroundColor:"rgba(47,53,58,0.2)",fontWeight:'bold'}}
-              options={{
-                pageSize: 10,
-                headerStyle: {
-                  backgroundColor: '#18262E',
-                  color:"white"
-                },
-                searchFieldStyle:{
-                    color:"black",
-                   // background:"green !important",
-                    paddingTop:"1%"
-                },
-                searchFieldAlignment:"right",
-                rowStyle:x => {
-                    if (x.tableData.id % 2) {
-                        return {backgroundColor: "#18262E",cursor:"pointer"}
-                    }
-                    else{
-                        return {backgroundColor: "#24343d",cursor:"pointer"}
-                    }
-                },
-                actionsCellStyle:{
-                    display:'none'
-                },
-                actionsColumnIndex:{
-                    display:'none'
-                },
-                cellStyle:{
-                    color:"white"
-                },
-                filterCellStyle:{
-                    color:"white"
-                },
-                paginationType:{
-                    color:"white"
-                },
-
-              }}
-              editable={{
-                onRowAdd: newData =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      const data = [...this.state.data];
-                      data.push(newData);
-                     this.setState({ ...this.state, data });
-                    }, 600);
-                  }),
-                onRowUpdate: (newData, oldData) =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      const data = [...this.state.data];
-                      data[data.indexOf(oldData)] = newData;
-                      this.setState({ ...this.state, data });
-                    }, 600);
-                  }),
-                onRowDelete: oldData =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      const data = [...this.state.data];
-                      data.splice(data.indexOf(oldData), 1);
-                      this.setState({ ...this.state, data });
-                    }, 600);
-                  }),
-              }}
-            />
-
-        <Modal isOpen={this.state.modal} toggle={this.toggle} >
-        <ModalHeader toggle={this.cancelModal}>{this.state.userName}</ModalHeader>
-        <ModalBody>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </ModalBody>
-        <ModalFooter>
-         
-           {showbutton}
-
-        </ModalFooter>
-      </Modal>
-
-    </div>
-    )
-  }
+				<Modal isOpen={this.state.modal} toggle={this.toggle}>
+					<ModalHeader toggle={this.cancelModal}>{this.state.userName}</ModalHeader>
+					<ModalBody>Pay the bill</ModalBody>
+					<Button color="success">Pay To Company</Button>
+				</Modal>
+			</div>
+		);
+	}
 }
 export default PTC;
 
@@ -421,5 +360,3 @@ class Colors extends Component {
     );
   }
 }*/
-
-

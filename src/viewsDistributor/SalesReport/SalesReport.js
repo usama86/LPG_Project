@@ -1,283 +1,243 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import MaterialTable from 'material-table'
-import  './SalesReport.css'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-
-
+import MaterialTable from 'material-table';
+import './SalesReport.css';
+import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 
 class SalesReport extends Component {
- state = {
-  
-  ModalTitle:'',
-  userName:'',
-  userType:'',
-  userStatus:'',
-  modal:false,
+	state = {
+		ModalTitle: '',
+		userName: '',
+		userType: '',
+		userStatus: '',
+		modal: false,
 
-  columns: [
-    { title: 'First Name', field: 'fname',cellStyle: {
-              
-                  color: 'white'
-              }, },
-    { title: 'Last Name', field: 'surname',cellStyle: {
-                
-                  color: 'white'
-              }, },
-    { title: 'Email', field: 'email',cellStyle: {
-     
-                  color: 'white'
-              }, },
-    { title: 'Password', field: 'password',cellStyle: {
-   
-                  color: 'white'
-              }, },
-    { title: 'Phone no', field: 'phoneno', type: 'numeric',cellStyle: {
-     
-                  color: 'white'
-              }, },
-    { title: 'Birth Year', field: 'birthYear', type: 'numeric',cellStyle: {
-     
-                  color: 'white'
-              }, },
-    { title: 'Registered date', field: 'rd',cellStyle: {
-  
-                  color: 'white'
-              }, },
-    { title: 'Active Status', field: 'status',cellStyle: {
-                  color: 'white'
-              }, },
-    { title: 'Type', field: 'type',cellStyle: {
-                color: 'white'
-            }, },
-  ],
-  data: [
-   
-    {
-      fname: 'Zerya',
-      surname: 'Baran',
-      email:'zeryan@gmail.com',
-      password:'zeryan123',
-      phoneno:'051-2642148',
-      birthYear: 1999,
-      birthCity: 34,
-      rd : '2019-5-14',
-      status : 'Approved',
-      type:'Distributor'
-    },
-    {
-      fname: 'Ahsan',
-      surname: 'Farooq',
-      email:'ahsan@gmail.com',
-      password:'ahsan123',
-      phoneno:'051-5942178',
-      birthYear: 1997,
-      rd : '2017-2-2',
-      status : 'Not Approved',
-      type:'Customer'
-      
-    },
-    {
-      fname: 'Usama',
-      surname: 'Amjad',
-      email:'usama@gmail.com',
-      password:'usama123',
-      phoneno:'051-5952178',
-      birthYear: 1995,
-      rd : '2017-2-1',
-      status : 'Approved',
-      type:'Customer'
-      
-    },
-    {
-      fname: 'Raheel',
-      surname: 'Tariq',
-      email:'raheel@gmail.com',
-      password:'raheel123',
-      phoneno:'051-5972178',
-      birthYear: 1996,
-      rd : '2017-8-1',
-      status : 'Not Approved',
-      type:'Distributor'
-      
-    },
-  ],
-  
+		columns: [
+			{
+				title: 'Product ID',
+				field: 'id',
+				type: 'numeric',
+				cellStyle: {
+					color: 'white'
+				}
+			},
+			{
+				title: 'Product Name',
+				field: 'product',
+				cellStyle: {
+					color: 'white'
+				}
+			},
+			{
+				title: 'Rate',
+				field: 'rate',
+				type: 'numeric',
+				cellStyle: {
+					color: 'white'
+				}
+			},
+			{
+				title: 'Quantity',
+				field: 'qty',
+				type: 'numeric',
+				cellStyle: {
+					color: 'white'
+				}
+			},
+			{
+				title: 'Amount',
+				field: 'amount',
+				type: 'numeric',
+				cellStyle: {
+					color: 'white'
+				}
+			},
+			{
+				title: 'Discount',
+				field: 'discount',
+				type: 'numeric',
+				cellStyle: {
+					color: 'white'
+				}
+			},
+			{
+				title: 'Total',
+				field: 'total',
+				type: 'numeric',
+				cellStyle: {
+					color: 'white'
+				}
+			},
+			{
+				title: 'Month',
+				field: 'month',
+				cellStyle: {
+					color: 'white'
+				}
+			},
+			{
+				title: 'Year',
+				field: 'year',
+				cellStyle: {
+					color: 'white'
+				}
+			}
+		],
+		data: [
+			{
+				id: 1000,
+				product: 'LPG1',
+				rate: 1800,
+				qty: 10,
+				amount: 18000,
+				discount: 1000,
+				total: 17000,
+				month: 'JANUARY',
+				year: '2019'
+			},
+			{
+				id: 1001,
+				product: 'LPG2',
+				rate: 1900,
+				qty: 11,
+				amount: 20900,
+				discount: 900,
+				total: 20000,
+				month: 'FEBRUARY',
+				year: '2019'
+			},
+			{
+				id: 1002,
+				product: 'LPG3',
+				rate: 2000,
+				qty: 12,
+				amount: 24000,
+				discount: 3000,
+				total: 21000,
+				month: 'MARCH',
+				year: '2019'
+			},
+			{
+				id: 1004,
+				product: 'LPG4',
+				rate: 2100,
+				qty: 5,
+				amount: 10500,
+				discount: 500,
+				total: 10000,
+				month: 'APRIL',
+				year: '2019'
+			},
+			{
+				id: 1005,
+				product: 'LPG5',
+				rate: 1500,
+				qty: 2,
+				amount: 3000,
+				discount: 0,
+				total: 3000,
+				month: 'MAY',
+				year: '2019'
+			},
+			{
+				id: 1006,
+				product: 'LPG6',
+				rate: 1400,
+				qty: 6,
+				amount: 8400,
+				discount: 400,
+				total: 8000,
+				month: 'JUNE',
+				year: '2019'
+			}
+		]
+	};
 
- }
- 
-  toggle=(row,columns,event)=>{
-
-    console.log(row);
-    console.log(columns);
-    console.log(event);
-    //         alert(row);
-   // console.log(columns.latestPost);
-    //console.log(columns._id);
-      this.setState({userName:columns.fname,userType:columns.type,userStatus:columns.status})
-      var x=this.state.modal
-      this.setState({modal:!x})  
-
-  }
-
-  cancelModal = ()=>{
-    var x=this.state.modal
-    this.setState({modal:!x})
-  } 
-
-
-
-
-
-
-
-
-
-  render() {
-
-let showbutton;
-    if(this.state.userType==='Customer' && this.state.userStatus==='Approved' )
-    {
-      showbutton = (
-        <div>
-          
-          <Button color="danger"  > Ban</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-
-        </div>
-        
-      )
-    }
-    else if(this.state.userType==='Customer' && this.state.userStatus==='Not Approved' )
-    {
-      showbutton = (
-        <div>
-          <Button color="primary" > Approve</Button>
-          <Button color="danger"  > Ban</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-
-        </div>
-        
-      )
-    }
-    else if(this.state.userType==='Distributor' && this.state.userStatus==='Approved' ){
-      showbutton = (
-        <div>
-          <Button color="danger"  > Ban</Button>
-          <Button color="success" >Generate invoice</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-        </div>
-        
-      )
-    }
-    else if(this.state.userType==='Distributor' && this.state.userStatus==='Not Approved' ){
-
-      showbutton = (
-        <div>
-          <Button color="primary" > Approve</Button>
-          <Button color="danger"  > Ban</Button>
-          <Button color="success" >Generate invoice</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-        </div>
-        
-      )
-
-    }
-
-  
-
-    return (
-      <div> 
-       <span> INVENTORY </span>
-              <MaterialTable
-              onRowClick={this.toggle}
-              title="Users"
-              columns={this.state.columns}
-              data={this.state.data}
-              style={{backgroundColor:"rgba(47,53,58,0.2)",fontWeight:'bold'}}
-              options={{
-                pageSize: 10,
-                headerStyle: {
-                  backgroundColor: '#18262E',
-                  color:"white"
-                },
-                searchFieldStyle:{
-                    color:"black",
-                   // background:"green !important",
-                    paddingTop:"1%"
-                },
-                searchFieldAlignment:"right",
-                rowStyle:x => {
-                    if (x.tableData.id % 2) {
-                        return {backgroundColor: "#18262E",cursor:"pointer"}
-                    }
-                    else{
-                        return {backgroundColor: "#24343d",cursor:"pointer"}
-                    }
-                },
-                actionsCellStyle:{
-                    display:'none'
-                },
-                actionsColumnIndex:{
-                    display:'none'
-                },
-                cellStyle:{
-                    color:"white"
-                },
-                filterCellStyle:{
-                    color:"white"
-                },
-                paginationType:{
-                    color:"white"
-                },
-
-              }}
-              editable={{
-                onRowAdd: newData =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      const data = [...this.state.data];
-                      data.push(newData);
-                     this.setState({ ...this.state, data });
-                    }, 600);
-                  }),
-                onRowUpdate: (newData, oldData) =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      const data = [...this.state.data];
-                      data[data.indexOf(oldData)] = newData;
-                      this.setState({ ...this.state, data });
-                    }, 600);
-                  }),
-                onRowDelete: oldData =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      const data = [...this.state.data];
-                      data.splice(data.indexOf(oldData), 1);
-                      this.setState({ ...this.state, data });
-                    }, 600);
-                  }),
-              }}
-            />
-
-        <Modal isOpen={this.state.modal} toggle={this.toggle} >
-        <ModalHeader toggle={this.cancelModal}>{this.state.userName}</ModalHeader>
-        <ModalBody>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </ModalBody>
-        <ModalFooter>
-         
-           {showbutton}
-
-        </ModalFooter>
-      </Modal>
-
-    </div>
-    )
-  }
+	render() {
+		return (
+			<div className="animated fadeIn">
+				<Row>
+					<Col xs="12">
+						<MaterialTable
+							onRowClick={this.toggle}
+							title="Sales Report"
+							icons="ADD"
+							columns={this.state.columns}
+							data={this.state.data}
+							style={{ backgroundColor: 'rgba(47,53,58,0.2)', fontWeight: 'bold' }}
+							options={{
+								pageSize: 10,
+								headerStyle: {
+									backgroundColor: '#18262E',
+									color: 'white'
+								},
+								searchFieldStyle: {
+									color: 'black',
+									// background:"green !important",
+									paddingTop: '1%'
+								},
+								searchFieldAlignment: 'right',
+								rowStyle: (x) => {
+									if (x.tableData.id % 2) {
+										return { backgroundColor: '#18262E', cursor: 'pointer' };
+									} else {
+										return { backgroundColor: '#24343d', cursor: 'pointer' };
+									}
+								},
+								actionsCellStyle: {
+									display: 'none'
+								},
+								actionsColumnIndex: {
+									display: 'none'
+								},
+								cellStyle: {
+									color: 'white'
+								},
+								filterCellStyle: {
+									color: 'white'
+								},
+								paginationType: {
+									color: 'white'
+								},
+								columnsButton: {
+									display: false
+								},
+								loadingType: 'overlay'
+							}}
+							editable={{
+								onRowAdd: (newData) =>
+									new Promise((resolve) => {
+										setTimeout(() => {
+											resolve();
+											const data = [ ...this.state.data ];
+											data.push(newData);
+											this.setState({ ...this.state, data });
+										}, 600);
+									}),
+								onRowUpdate: (newData, oldData) =>
+									new Promise((resolve) => {
+										setTimeout(() => {
+											resolve();
+											const data = [ ...this.state.data ];
+											data[data.indexOf(oldData)] = newData;
+											this.setState({ ...this.state, data });
+										}, 600);
+									}),
+								onRowDelete: (oldData) =>
+									new Promise((resolve) => {
+										setTimeout(() => {
+											resolve();
+											const data = [ ...this.state.data ];
+											data.splice(data.indexOf(oldData), 1);
+											this.setState({ ...this.state, data });
+										}, 600);
+									})
+							}}
+						/>
+					</Col>
+				</Row>
+			</div>
+		);
+	}
 }
 export default SalesReport;
 
@@ -421,5 +381,3 @@ class Colors extends Component {
     );
   }
 }*/
-
-
