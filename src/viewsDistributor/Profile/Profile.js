@@ -11,6 +11,9 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import TextField from '@material-ui/core/TextField';
+import Icon from '@material-ui/core/Icon';
+import SaveIcon from '@material-ui/icons/Save';
+import Button from '@material-ui/core/Button';
 
 class Profile extends Component {
 	render() {
@@ -42,7 +45,8 @@ class Profile extends Component {
 										style={{
 											margin: '10px',
 											width: '152px',
-											height: '152px'
+											height: '152px',
+											cursor: 'pointer'
 										}}
 										src={require('../img/sad.jpg')}
 									/>
@@ -172,6 +176,19 @@ class Profile extends Component {
 										}}
 									/>
 								</div>
+								<Button
+									variant="contained"
+									color="primary"
+									size="large"
+									style={{
+										marginLeft: '90%',
+										marginTop: '12px',
+										marginBottom: '47px'
+									}}
+									startIcon={<SaveIcon />}
+								>
+									Save
+								</Button>
 							</div>
 						</div>
 					</Container>
