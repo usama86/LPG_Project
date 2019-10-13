@@ -6,6 +6,12 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 
+import Rating from '@material-ui/lab/Rating';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
+
+import TextField from '@material-ui/core/TextField';
+
 class Profile extends Component {
 	render() {
 		return (
@@ -20,7 +26,15 @@ class Profile extends Component {
 							width: '94%'
 						}}
 					>
-						<Grid container alignItems="center">
+						<Grid
+							container
+							alignItems="center"
+							style={{
+								borderBottomStyle: 'solid',
+								color: '#20A8D8',
+								borderBottomWidth: 'thin'
+							}}
+						>
 							<div style={{ display: 'flex' }}>
 								<div>
 									<Avatar
@@ -34,8 +48,8 @@ class Profile extends Component {
 									/>
 								</div>
 								<div style={{ paddingLeft: '30%', paddingTop: '5%' }}>
-									<div style={{ paddingBottom: '8px' }}>
-										<span style={{ fontSize: '30px', whiteSpace: 'nowrap' }}>
+									<div>
+										<span style={{ fontSize: '30px', whiteSpace: 'nowrap', color: 'black' }}>
 											Yasir Distributor
 										</span>
 									</div>
@@ -55,11 +69,111 @@ class Profile extends Component {
 										{' '}
 										- Distributor
 									</span>
+									<br />
+									<Box
+										component="fieldset"
+										mb={3}
+										borderColor="transparent"
+										style={{ cursor: 'pointer' }}
+									>
+										<Typography component="legend" style={{ paddingLeft: '5px', color: 'grey' }}>
+											Rating
+										</Typography>
+										<Rating value={4} style={{ paddingLeft: '3px' }} readOnly />
+									</Box>
 								</div>
 							</div>
 						</Grid>
 
-						<div style={{ paddingTop: '2%' }} />
+						<div style={{ paddingTop: '4%' }}>
+							<span style={{ fontSize: '25px', paddingLeft: '2%' }}>Account</span>
+							<div style={{ paddingLeft: '2%' }}>
+								<div style={{ paddingTop: '4%', color: 'gray' }}>
+									<TextField
+										id="standard-full-width"
+										label="UserName"
+										style={{ margin: 8 }}
+										placeholder="Enter username here"
+										/*			helperText="Full width!" */
+										fullWidth
+										margin="normal"
+										InputLabelProps={{
+											shrink: true
+										}}
+									/>
+								</div>
+								<div style={{ paddingTop: '4%', color: 'gray' }}>
+									<TextField
+										id="standard-full-width"
+										label="Email"
+										style={{ margin: 8 }}
+										placeholder="Enter email here"
+										/*			helperText="Full width!" */
+										fullWidth
+										margin="normal"
+										InputLabelProps={{
+											shrink: true
+										}}
+									/>
+								</div>
+								<div style={{ paddingTop: '4%', color: 'gray' }}>
+									<TextField
+										id="standard-full-width"
+										label="Password"
+										style={{ margin: 8 }}
+										placeholder="Enter password here"
+										/*			helperText="Full width!" */
+										fullWidth
+										margin="normal"
+										InputLabelProps={{
+											shrink: true
+										}}
+									/>
+								</div>
+								<div style={{ paddingTop: '4%', color: 'gray' }}>
+									<TextField
+										id="standard-full-width"
+										label="Distributor Name"
+										style={{ margin: 8 }}
+										placeholder="Enter distributor name here"
+										/*			helperText="Full width!" */
+										fullWidth
+										margin="normal"
+										InputLabelProps={{
+											shrink: true
+										}}
+									/>
+								</div>
+								<div style={{ paddingTop: '4%', color: 'gray' }}>
+									<TextField
+										id="standard-full-width"
+										label="Phone No"
+										style={{ margin: 8 }}
+										placeholder="Enter phone no here"
+										/*			helperText="Full width!" */
+										fullWidth
+										margin="normal"
+										InputLabelProps={{
+											shrink: true
+										}}
+									/>
+								</div>
+								<div style={{ paddingTop: '4%', color: 'gray' }}>
+									<TextField
+										id="standard-full-width"
+										label="Address"
+										style={{ margin: 8 }}
+										placeholder="Enter address here"
+										/*			helperText="Full width!" */
+										fullWidth
+										margin="normal"
+										InputLabelProps={{
+											shrink: true
+										}}
+									/>
+								</div>
+							</div>
+						</div>
 					</Container>
 				</React.Fragment>
 			</div>
