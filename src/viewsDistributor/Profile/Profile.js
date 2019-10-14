@@ -1,283 +1,70 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
-import MaterialTable from 'material-table'
-import  './Profile.css'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import './Profile.css';
 
-
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import Avatar from '@material-ui/core/Avatar';
+import Grid from '@material-ui/core/Grid';
 
 class Profile extends Component {
- state = {
-  
-  ModalTitle:'',
-  userName:'',
-  userType:'',
-  userStatus:'',
-  modal:false,
+	render() {
+		return (
+			<div>
+				<React.Fragment>
+					<CssBaseline />
+					<Container
+						fixed
+						style={{
+							background: 'white',
+							marginLeft: '37px',
+							width: '94%'
+						}}
+					>
+						<Grid container alignItems="center">
+							<div style={{ display: 'flex' }}>
+								<div>
+									<Avatar
+										alt="Remy Sharp"
+										style={{
+											margin: '10px',
+											width: '152px',
+											height: '152px'
+										}}
+										src={require('../img/sad.jpg')}
+									/>
+								</div>
+								<div style={{ paddingLeft: '30%', paddingTop: '5%' }}>
+									<div style={{ paddingBottom: '8px' }}>
+										<span style={{ fontSize: '30px', whiteSpace: 'nowrap' }}>
+											Yasir Distributor
+										</span>
+									</div>
 
-  columns: [
-    { title: 'First Name', field: 'fname',cellStyle: {
-              
-                  color: 'white'
-              }, },
-    { title: 'Last Name', field: 'surname',cellStyle: {
-                
-                  color: 'white'
-              }, },
-    { title: 'Email', field: 'email',cellStyle: {
-     
-                  color: 'white'
-              }, },
-    { title: 'Password', field: 'password',cellStyle: {
-   
-                  color: 'white'
-              }, },
-    { title: 'Phone no', field: 'phoneno', type: 'numeric',cellStyle: {
-     
-                  color: 'white'
-              }, },
-    { title: 'Birth Year', field: 'birthYear', type: 'numeric',cellStyle: {
-     
-                  color: 'white'
-              }, },
-    { title: 'Registered date', field: 'rd',cellStyle: {
-  
-                  color: 'white'
-              }, },
-    { title: 'Active Status', field: 'status',cellStyle: {
-                  color: 'white'
-              }, },
-    { title: 'Type', field: 'type',cellStyle: {
-                color: 'white'
-            }, },
-  ],
-  data: [
-   
-    {
-      fname: 'Zerya',
-      surname: 'Baran',
-      email:'zeryan@gmail.com',
-      password:'zeryan123',
-      phoneno:'051-2642148',
-      birthYear: 1999,
-      birthCity: 34,
-      rd : '2019-5-14',
-      status : 'Approved',
-      type:'Distributor'
-    },
-    {
-      fname: 'Ahsan',
-      surname: 'Farooq',
-      email:'ahsan@gmail.com',
-      password:'ahsan123',
-      phoneno:'051-5942178',
-      birthYear: 1997,
-      rd : '2017-2-2',
-      status : 'Not Approved',
-      type:'Customer'
-      
-    },
-    {
-      fname: 'Usama',
-      surname: 'Amjad',
-      email:'usama@gmail.com',
-      password:'usama123',
-      phoneno:'051-5952178',
-      birthYear: 1995,
-      rd : '2017-2-1',
-      status : 'Approved',
-      type:'Customer'
-      
-    },
-    {
-      fname: 'Raheel',
-      surname: 'Tariq',
-      email:'raheel@gmail.com',
-      password:'raheel123',
-      phoneno:'051-5972178',
-      birthYear: 1996,
-      rd : '2017-8-1',
-      status : 'Not Approved',
-      type:'Distributor'
-      
-    },
-  ],
-  
+									<span
+										style={{
+											color: '#20A8D8',
+											cursor: 'pointer',
+											paddingLeft: '3px',
+											whiteSpace: 'nowrap',
+											fontSize: '19px'
+										}}
+									>
+										Yasir@gmail.com{' '}
+									</span>
+									<span style={{ color: 'grey', whiteSpace: 'nowrap', fontSize: '19px' }}>
+										{' '}
+										- Distributor
+									</span>
+								</div>
+							</div>
+						</Grid>
 
- }
- 
-  toggle=(row,columns,event)=>{
-
-    console.log(row);
-    console.log(columns);
-    console.log(event);
-    //         alert(row);
-   // console.log(columns.latestPost);
-    //console.log(columns._id);
-      this.setState({userName:columns.fname,userType:columns.type,userStatus:columns.status})
-      var x=this.state.modal
-      this.setState({modal:!x})  
-
-  }
-
-  cancelModal = ()=>{
-    var x=this.state.modal
-    this.setState({modal:!x})
-  } 
-
-
-
-
-
-
-
-
-
-  render() {
-
-let showbutton;
-    if(this.state.userType==='Customer' && this.state.userStatus==='Approved' )
-    {
-      showbutton = (
-        <div>
-          
-          <Button color="danger"  > Ban</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-
-        </div>
-        
-      )
-    }
-    else if(this.state.userType==='Customer' && this.state.userStatus==='Not Approved' )
-    {
-      showbutton = (
-        <div>
-          <Button color="primary" > Approve</Button>
-          <Button color="danger"  > Ban</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-
-        </div>
-        
-      )
-    }
-    else if(this.state.userType==='Distributor' && this.state.userStatus==='Approved' ){
-      showbutton = (
-        <div>
-          <Button color="danger"  > Ban</Button>
-          <Button color="success" >Generate invoice</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-        </div>
-        
-      )
-    }
-    else if(this.state.userType==='Distributor' && this.state.userStatus==='Not Approved' ){
-
-      showbutton = (
-        <div>
-          <Button color="primary" > Approve</Button>
-          <Button color="danger"  > Ban</Button>
-          <Button color="success" >Generate invoice</Button>
-          <Button color="secondary" onClick={this.cancelModal}>Cancel</Button>
-        </div>
-        
-      )
-
-    }
-
-  
-
-    return (
-      <div> 
-       <span> INVENTORY </span>
-              <MaterialTable
-              onRowClick={this.toggle}
-              title="Users"
-              columns={this.state.columns}
-              data={this.state.data}
-              style={{backgroundColor:"rgba(47,53,58,0.2)",fontWeight:'bold'}}
-              options={{
-                pageSize: 10,
-                headerStyle: {
-                  backgroundColor: '#18262E',
-                  color:"white"
-                },
-                searchFieldStyle:{
-                    color:"black",
-                   // background:"green !important",
-                    paddingTop:"1%"
-                },
-                searchFieldAlignment:"right",
-                rowStyle:x => {
-                    if (x.tableData.id % 2) {
-                        return {backgroundColor: "#18262E",cursor:"pointer"}
-                    }
-                    else{
-                        return {backgroundColor: "#24343d",cursor:"pointer"}
-                    }
-                },
-                actionsCellStyle:{
-                    display:'none'
-                },
-                actionsColumnIndex:{
-                    display:'none'
-                },
-                cellStyle:{
-                    color:"white"
-                },
-                filterCellStyle:{
-                    color:"white"
-                },
-                paginationType:{
-                    color:"white"
-                },
-
-              }}
-              editable={{
-                onRowAdd: newData =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      const data = [...this.state.data];
-                      data.push(newData);
-                     this.setState({ ...this.state, data });
-                    }, 600);
-                  }),
-                onRowUpdate: (newData, oldData) =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      const data = [...this.state.data];
-                      data[data.indexOf(oldData)] = newData;
-                      this.setState({ ...this.state, data });
-                    }, 600);
-                  }),
-                onRowDelete: oldData =>
-                  new Promise(resolve => {
-                    setTimeout(() => {
-                      resolve();
-                      const data = [...this.state.data];
-                      data.splice(data.indexOf(oldData), 1);
-                      this.setState({ ...this.state, data });
-                    }, 600);
-                  }),
-              }}
-            />
-
-        <Modal isOpen={this.state.modal} toggle={this.toggle} >
-        <ModalHeader toggle={this.cancelModal}>{this.state.userName}</ModalHeader>
-        <ModalBody>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </ModalBody>
-        <ModalFooter>
-         
-           {showbutton}
-
-        </ModalFooter>
-      </Modal>
-
-    </div>
-    )
-  }
+						<div style={{ paddingTop: '2%' }} />
+					</Container>
+				</React.Fragment>
+			</div>
+		);
+	}
 }
 export default Profile;
 
@@ -421,5 +208,3 @@ class Colors extends Component {
     );
   }
 }*/
-
-
