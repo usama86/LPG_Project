@@ -1,16 +1,16 @@
 
 export default {
-  items: [
-    {
-      name: 'Dashboard',
-      url: '/dashboard',
-      icon: 'icon-speedometer',
-      badge: {
-        variant: 'info',
-       // text: 'NEW',
-      },
-    },
-    /*{
+	items: [
+		{
+			name: 'Dashboard',
+			url: '/dashboard',
+			icon: 'icon-speedometer',
+			badge: {
+				variant: 'info'
+				// text: 'NEW',
+			}
+		},
+		/*{
       title: true,
       name: 'Theme',
       wrapper: {            // optional wrapper object
@@ -19,17 +19,17 @@ export default {
       },
       class: ''             // optional class names space delimited list for title item ex: "text-center"
     },*/
-    {
-      name: 'Users',
-      url: '/admin/users',
-      icon: 'icon-user',
-    },
-    {
-      name: 'Orders',
-      url: '/admin/orders',
-      icon: 'icon-basket-loaded',
-    },
-    /*{
+		{
+			name: 'Users',
+			url: '/admin/users',
+			icon: 'icon-user'
+		},
+		{
+			name: 'Orders',
+			url: '/admin/orders',
+			icon: 'icon-basket-loaded'
+		},
+		/*{
       title: true,
       name: 'Components',
       wrapper: {
@@ -37,21 +37,6 @@ export default {
         attributes: {},
       },
     },*/
-<<<<<<< Updated upstream
-   // {
-     // name: 'Base',
-      //url: '/base',
-      //icon: 'icon-puzzle',
-      //children: [
-        {
-          name: 'Sales',
-          url: '/admin/sales',
-          icon: 'icon-wallet',
-        },
-        /*{
-          name: 'Cards',
-          url: '/base/cards',
-=======
 		// {
 		// name: 'Base',
 		//url: '/base',
@@ -65,10 +50,9 @@ export default {
 		{
           name: 'Transactions',
           url: '/admin/transactions',
->>>>>>> Stashed changes
           icon: 'icon-puzzle',
         },
-       /* {
+     /*   {
           name: 'Carousels',
           url: '/base/carousels',
           icon: 'icon-puzzle',
@@ -163,7 +147,7 @@ export default {
         {
           name: 'Brand Buttons',
           url: '/buttons/brand-buttons',
-          icon: 'icon-cursor',
+          icon: 'icon-cursor', 
         },
       ],
     },
@@ -207,29 +191,29 @@ export default {
         },
       ],
     },*/
-    {
-      name: 'Notifications',
-      url: '/notifications',
-      icon: 'icon-bell',
-      children: [
-        {
-          name: 'Alerts',
-          url: '/notifications/alerts',
-          icon: 'icon-bell',
-        },
-        {
-          name: 'Badges',
-          url: '/notifications/badges',
-          icon: 'icon-bell',
-        },
-        {
-          name: 'Modals',
-          url: '/notifications/modals',
-          icon: 'icon-bell',
-        },
-      ],
-    },
-    /*{
+		{
+			name: 'Notifications',
+			url: '/notifications',
+			icon: 'icon-bell',
+			children: [
+				{
+					name: 'Alerts',
+					url: '/notifications/alerts',
+					icon: 'icon-bell'
+				},
+				{
+					name: 'Badges',
+					url: '/notifications/badges',
+					icon: 'icon-bell'
+				},
+				{
+					name: 'Modals',
+					url: '/notifications/modals',
+					icon: 'icon-bell'
+				}
+			]
+		},
+		/*{
       name: 'Widgets',
       url: '/widgets',
       icon: 'icon-calculator',
@@ -238,29 +222,29 @@ export default {
         text: 'NEW',
       },
     },*/
-    {
-      divider: true,
-    },
-    /*{
+		{
+			divider: true
+		},
+		/*{
       title: true,
       name: 'Extras',
     },*/
-    //{
-      //name: 'Pages',
-      //url: '/pages',
-     // icon: 'icon-star',
-     // children: [
-        {
-          name: 'Login',
-          url: '/login',
-          icon: 'icon-star',
-        },
-        {
-          name: 'Register',
-          url: '/register',
-          icon: 'icon-star',
-        },
-        /*{
+		//{
+		//name: 'Pages',
+		//url: '/pages',
+		// icon: 'icon-star',
+		// children: [
+		{
+			name: 'Login',
+			url: '/login',
+			icon: 'icon-star'
+		},
+		{
+			name: 'Register',
+			url: '/register',
+			icon: 'icon-star'
+		}
+		/*{
           name: 'Error 404',
           url: '/404',
           icon: 'icon-star',
@@ -270,15 +254,15 @@ export default {
           url: '/500',
           icon: 'icon-star',
         },*/
-     // ],
-   // },
-    /*{
+		// ],
+		// },
+		/*{
       name: 'Disabled',
       url: '/dashboard',
       icon: 'icon-ban',
       attributes: { disabled: true },
     },*/
-    /*{
+		/*{
       name: 'Download CoreUI',
       url: 'https://coreui.io/react/',
       icon: 'icon-cloud-download',
@@ -293,5 +277,6 @@ export default {
       variant: 'danger',
       attributes: { target: '_blank', rel: "noopener" },
     },*/
-  ],
+	]
 };
+
