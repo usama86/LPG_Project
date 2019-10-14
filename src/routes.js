@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Cards = React.lazy(() => import('./views/Base/Cards'));
+const Transactions = React.lazy(() => import('./views/Base/Cards'));// chnaged this
 const Carousels = React.lazy(() => import('./views/Base/Carousels'));
 const Collapses = React.lazy(() => import('./views/Base/Collapses'));
 const Dropdowns = React.lazy(() => import('./views/Base/Dropdowns'));
@@ -59,8 +59,8 @@ const routes = [
 	{ path: '/users', exact: true, name: 'Theme', component: users },
 	{ path: '/admin/users', name: 'Users', component: users }, //changed this
 	{ path: '/admin/orders', name: 'Orders', component: orders }, //changed this
-	{ path: '/base', exact: true, name: 'Base', component: Cards },
-	{ path: '/base/cards', name: 'Cards', component: Cards },
+	{ path: '/base', exact: true, name: 'Base', component: Transactions },
+	{ path: '/admin/transactions', name: 'Transactions', component: Transactions },//changed this
 	{ path: '/base/forms', name: 'Forms', component: Forms },
 	{ path: '/base/switches', name: 'Switches', component: Switches },
 	{ path: '/base/tables', name: 'Tables', component: Tables },

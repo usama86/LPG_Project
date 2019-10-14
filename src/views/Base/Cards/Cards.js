@@ -1,413 +1,199 @@
 import React, { Component } from 'react';
 import { Badge, Card, CardBody, CardFooter, CardHeader, Col, Row, Collapse, Fade } from 'reactstrap';
+import MaterialTable from 'material-table'
 import { AppSwitch } from '@coreui/react'
 
 class Cards extends Component {
-  constructor(props) {
-    super(props);
+ 
+  state = {
+  
+    ModalTitle:'',
+    userName:'',
+    userType:'',
+    userStatus:'',
+    modal:false,
+  
+    columns: [
+      { title: 'ORDER_ID', field: 'oid',type:'numeric',cellStyle: {
+                
+                    color: 'white'
+                }, },
+      { title: 'ORDER_DATE', field: 'odate',cellStyle: {
+                  
+                    color: 'white'
+                }, },
+      { title: 'CUSTOMER_ID', field: 'cid',type:'numeric',cellStyle: {
+       
+                    color: 'white'
+                }, },
+      { title: 'CUSTOMER_NAME', field: 'cname',cellStyle: {
+     
+                    color: 'white'
+                }, },
+      { title: 'CUSTOMER_ADDRESS', field: 'caddress',cellStyle: {
+       
+                    color: 'white'
+                }, },
+      { title: 'PRODUCT_ID', field: 'id', type: 'numeric',cellStyle: {
+       
+                  color: 'white'
+              }, },
+      { title: 'PRODUCT_NAME', field: 'product',cellStyle: {
+       
+                    color: 'white'
+                }, },
+      { title: 'ORDERED_QTY', field: 'qty',type:'numeric',cellStyle: {
+    
+                    color: 'white'
+                }, },
+      
+    ],
+    data: [
+     
+      {
+        oid: 1,
+        odate: '1/7/2019',
+        cid:2000,
+        cname:'Usama Bhatti',
+        caddress:'H#36 St#12 E11 isld',
+        id:1000,
+        product:'LPG1',
+        qty:2,
+      },
+      {
+        oid: 2,
+        odate: '1/4/2019',
+        cid:2001,
+        cname:'Uzair Abbass',
+        caddress:'H#3 St#4 F7 isld',
+        id:1001,
+        product:'LPG2',
+        qty:4,
+      },
+      {
+        oid: 3,
+        odate: '1/2/2019',
+        cid:2002,
+        cname:'Ali Hamza',
+        caddress:'H#47 St#5 Block D PWD Isld',
+        id:1002,
+        product:'LPG3',
+        qty:7,
+      },
+      {
+        oid: 4,
+        odate: '17/2/2019',
+        cid:2003,
+        cname:'Bilal Zafar',
+        caddress:'H#2 St#7 Block A BAHRIA TOWN Isld',
+        id:1003,
+        product:'LPG4',
+        qty:8,
+      },
+  
+    ],
+    
+  
+   }
+  
 
-    this.toggle = this.toggle.bind(this);
-    this.toggleFade = this.toggleFade.bind(this);
-    this.state = {
-      collapse: true,
-      fadeIn: true,
-      timeout: 300
-    };
-  }
 
-  toggle() {
-    this.setState({ collapse: !this.state.collapse });
-  }
 
-  toggleFade() {
-    this.setState((prevState) => { return { fadeIn: !prevState }});
-  }
 
   render() {
     return (
       <div className="animated fadeIn">
-        <Row>
-          <Col xs="12" sm="6" md="4">
-            <Card>
-              <CardHeader>
-                Card title
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-              <CardFooter>Card footer</CardFooter>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card>
-              <CardHeader>
-                Card with icon
-                <div className="card-header-actions">
-                  <i className="fa fa-check float-right"></i>
-                </div>
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card>
-              <CardHeader>
-                Card with switch
-                <div className="card-header-actions">
-                  <AppSwitch className={'float-right mb-0'} label color={'info'} defaultChecked size={'sm'}/>
-                </div>
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card>
-              <CardHeader>
-                Card with label
-                <div className="card-header-actions">
-                  <Badge color="success" className="float-right">Success</Badge>
-                </div>
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card>
-              <CardHeader>
-                Card with label
-                <div className="card-header-actions">
-                  <Badge pill color="danger" className="float-right">42</Badge>
-                </div>
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs="12" sm="6" md="4">
-            <Card className="border-primary">
-              <CardHeader>
-                Card outline primary
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="border-secondary">
-              <CardHeader>
-                Card outline secondary
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="border-success">
-              <CardHeader>
-                Card outline success
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="border-info">
-              <CardHeader>
-                Card outline info
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="border-warning">
-              <CardHeader>
-                Card outline warning
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="border-danger">
-              <CardHeader>
-                Card outline danger
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
+                 <Row>
+          <Col xs="12">
+
+
+          <MaterialTable
+          
+              onRowClick={this.toggle}
+              title="Transactions"
+              icons="ADD"
+              columns={this.state.columns}
+              data={this.state.data}
+              style={{backgroundColor:"rgba(47,53,58,0.2)",fontWeight:'bold'}}
+              options={{
+                pageSize: 10,
+                headerStyle: {
+                  backgroundColor: '#18262E',
+                  color:"white"
+                },
+                searchFieldStyle:{
+                    color:"black",
+                   // background:"green !important",
+                    paddingTop:"1%"
+                },
+                searchFieldAlignment:"right",
+                rowStyle:x => {
+                    if (x.tableData.id % 2) {
+                        return {backgroundColor: "#18262E",cursor:"pointer"}
+                    }
+                    else{
+                        return {backgroundColor: "#24343d",cursor:"pointer"}
+                    }
+                },
+                actionsCellStyle:{
+                    display:'none'
+                },
+                actionsColumnIndex:{
+                    display:'none'
+                },
+                cellStyle:{
+                    color:"white"
+                },
+                filterCellStyle:{
+                    color:"white"
+                },
+                paginationType:{
+                    color:"white"
+                },
+                columnsButton:{
+                  display:false
+                },
+                loadingType:'overlay',
+                
+
+              }}
+              editable={{
+                onRowAdd: newData =>
+                  new Promise(resolve => {
+                    setTimeout(() => {
+                      resolve();
+                      const data = [...this.state.data];
+                      data.push(newData);
+                     this.setState({ ...this.state, data });
+                    }, 600);
+                  }),
+                onRowUpdate: (newData, oldData) =>
+                  new Promise(resolve => {
+                    setTimeout(() => {
+                      resolve();
+                      const data = [...this.state.data];
+                      data[data.indexOf(oldData)] = newData;
+                      this.setState({ ...this.state, data });
+                    }, 600);
+                  }),
+                onRowDelete: oldData =>
+                  new Promise(resolve => {
+                    setTimeout(() => {
+                      resolve();
+                      const data = [...this.state.data];
+                      data.splice(data.indexOf(oldData), 1);
+                      this.setState({ ...this.state, data });
+                    }, 600);
+                  }),
+              }}
+            />
+
+
+
+           
           </Col>
         </Row>
 
-        <Row>
-          <Col xs="12" sm="6" md="4">
-            <Card className="card-accent-primary">
-              <CardHeader>
-                Card with accent
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="card-accent-secondary">
-              <CardHeader>
-                Card with accent
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="card-accent-success">
-              <CardHeader>
-                Card with accent
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="card-accent-info">
-              <CardHeader>
-                Card with accent
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="card-accent-warning">
-              <CardHeader>
-                Card with accent
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="card-accent-danger">
-              <CardHeader>
-                Card with accent
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-primary text-center">
-              <CardBody>
-                <blockquote className="card-bodyquote">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-success text-center">
-              <CardBody>
-                <blockquote className="card-bodyquote">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-info text-center">
-              <CardBody>
-                <blockquote className="card-bodyquote">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-warning text-center">
-              <CardBody>
-                <blockquote className="card-bodyquote">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-danger text-center">
-              <CardBody>
-                <blockquote className="card-bodyquote">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-primary text-center">
-              <CardBody>
-                <blockquote className="card-bodyquote">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <footer>Someone famous in <cite title="Source Title">Source Title</cite></footer>
-                </blockquote>
-              </CardBody>
-            </Card>
-          </Col>
-        </Row>
-        <Row>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-primary">
-              <CardHeader>
-                Card title
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-success">
-              <CardHeader>
-                Card title
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-info">
-              <CardHeader>
-                Card title
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-warning">
-              <CardHeader>
-                Card title
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Card className="text-white bg-danger">
-              <CardHeader>
-                Card title
-              </CardHeader>
-              <CardBody>
-                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-              </CardBody>
-            </Card>
-          </Col>
-          <Col xs="12" sm="6" md="4">
-            <Fade timeout={this.state.timeout} in={this.state.fadeIn}>
-              <Card>
-                <CardHeader>
-                  Card actions
-                  <div className="card-header-actions">
-                    {/*eslint-disable-next-line*/}
-                    <a href="#" className="card-header-action btn btn-setting"><i className="icon-settings"></i></a>
-                    {/*eslint-disable-next-line*/}
-                    <a className="card-header-action btn btn-minimize" data-target="#collapseExample" onClick={this.toggle}><i className="icon-arrow-up"></i></a>
-                    {/*eslint-disable-next-line*/}
-                    <a className="card-header-action btn btn-close" onClick={this.toggleFade}><i className="icon-close"></i></a>
-                  </div>
-                </CardHeader>
-                <Collapse isOpen={this.state.collapse} id="collapseExample">
-                  <CardBody>
-                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut
-                    laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation
-                    ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
-                  </CardBody>
-                </Collapse>
-              </Card>
-            </Fade>
-          </Col>
-
-        </Row>
       </div>
     );
   }
