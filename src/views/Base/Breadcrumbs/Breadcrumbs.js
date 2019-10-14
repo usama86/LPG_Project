@@ -26,7 +26,7 @@ class Breadcrumbs extends Component {
                 
                     color: 'white'
                 }, },
-      { title: 'PRODUCT', field: 'product',cellStyle: {
+      { title: 'PRODUCT_NAME', field: 'product',cellStyle: {
                   
                     color: 'white'
                 }, },

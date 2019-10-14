@@ -37,6 +37,7 @@ export default {
         attributes: {},
       },
     },*/
+<<<<<<< Updated upstream
    // {
      // name: 'Base',
       //url: '/base',
@@ -50,9 +51,24 @@ export default {
         /*{
           name: 'Cards',
           url: '/base/cards',
+=======
+		// {
+		// name: 'Base',
+		//url: '/base',
+		//icon: 'icon-puzzle',
+		//children: [
+		{
+			name: 'Sales',
+			url: '/admin/sales',
+			icon: 'icon-wallet'
+		},
+		{
+          name: 'Transactions',
+          url: '/admin/transactions',
+>>>>>>> Stashed changes
           icon: 'icon-puzzle',
         },
-        {
+       /* {
           name: 'Carousels',
           url: '/base/carousels',
           icon: 'icon-puzzle',
