@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
 import MaterialTable from 'material-table'
+import  '../../Theme/Colors/Colors.css'
 
 
 
@@ -145,8 +146,10 @@ class Breadcrumbs extends Component {
 
 
           <MaterialTable
+          
               onRowClick={this.toggle}
               title="Sales Report"
+              icons="ADD"
               columns={this.state.columns}
               data={this.state.data}
               style={{backgroundColor:"rgba(47,53,58,0.2)",fontWeight:'bold'}}
@@ -185,6 +188,11 @@ class Breadcrumbs extends Component {
                 paginationType:{
                     color:"white"
                 },
+                columnsButton:{
+                  display:false
+                },
+                loadingType:'overlay',
+                
 
               }}
               editable={{
