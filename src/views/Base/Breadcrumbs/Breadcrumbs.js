@@ -22,39 +22,39 @@ class Breadcrumbs extends Component {
     modal:false,
   
     columns: [
-      { title: 'PRODUCT_ID', field: 'id',type:'numeric',cellStyle: {
+      { title: 'Product_Id', field: 'id',type:'numeric',cellStyle: {
                 
                     color: 'white'
                 }, },
-      { title: 'PRODUCT_NAME', field: 'product',cellStyle: {
+      { title: 'Product_Name', field: 'product',cellStyle: {
                   
                     color: 'white'
                 }, },
-      { title: 'RATE', field: 'rate',type:'numeric',cellStyle: {
+      { title: 'Rate', field: 'rate',type:'numeric',cellStyle: {
        
                     color: 'white'
                 }, },
-      { title: 'QTY', field: 'qty',type:'numeric',cellStyle: {
+      { title: 'Qty', field: 'qty',type:'numeric',cellStyle: {
      
                     color: 'white'
                 }, },
-      { title: 'AMOUNT', field: 'amount', type: 'numeric',cellStyle: {
+      { title: 'Amount', field: 'amount', type: 'numeric',cellStyle: {
        
                     color: 'white'
                 }, },
-      { title: 'DISCOUNT', field: 'discount', type: 'numeric',cellStyle: {
+      { title: 'Discount', field: 'discount', type: 'numeric',cellStyle: {
        
                   color: 'white'
               }, },
-      { title: 'TOTAL', field: 'total', type: 'numeric',cellStyle: {
+      { title: 'Total', field: 'total', type: 'numeric',cellStyle: {
        
                     color: 'white'
                 }, },
-      { title: 'MONTH', field: 'month',cellStyle: {
+      { title: 'Month', field: 'month',cellStyle: {
     
                     color: 'white'
                 }, },
-      { title: 'YEAR', field: 'year',cellStyle: {
+      { title: 'Yaer', field: 'year',cellStyle: {
                     color: 'white'
                 }, },
       

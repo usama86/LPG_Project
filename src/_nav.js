@@ -42,11 +42,30 @@ export default {
 		//url: '/base',
 		//icon: 'icon-puzzle',
 		//children: [
+	
+		
+   // {
+     // name: 'Base',
+      //url: '/base',
+      //icon: 'icon-puzzle',
+      //children: [
+       
+      /*{
+
+          name: 'Cards',
+          url: '/base/cards',
+
+		// {
+		// name: 'Base',
+		//url: '/base',
+		//icon: 'icon-puzzle',
+		//children: [*/
 		{
 			name: 'Sales',
 			url: '/admin/sales',
 			icon: 'icon-wallet'
 		},
+
 		
    // {
      // name: 'Base',
@@ -73,6 +92,7 @@ export default {
 			url: '/admin/sales',
 			icon: 'icon-wallet'
 		},
+
 
 		{
           name: 'Transactions',

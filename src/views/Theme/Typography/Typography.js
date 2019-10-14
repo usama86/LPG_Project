@@ -13,39 +13,39 @@ class Typography extends Component {
     modal:false,
   
     columns: [
-      { title: 'ORDER_ID', field: 'oid',type:'numeric',cellStyle: {
+      { title: 'Order_Id', field: 'oid',type:'numeric',cellStyle: {
                 
                     color: 'white'
                 }, },
-      { title: 'ORDER_DATE', field: 'odate',cellStyle: {
+      { title: 'Order_Date', field: 'odate',cellStyle: {
                   
                     color: 'white'
                 }, },
-      { title: 'CUSTOMER_ID', field: 'cid',type:'numeric',cellStyle: {
+      { title: 'Customer_Id', field: 'cid',type:'numeric',cellStyle: {
        
                     color: 'white'
                 }, },
-      { title: 'CUSTOMER_NAME', field: 'cname',cellStyle: {
+      { title: 'Customer_Name', field: 'cname',cellStyle: {
      
                     color: 'white'
                 }, },
-      { title: 'CUSTOMER_ADDRESS', field: 'caddress',cellStyle: {
+      { title: 'Customer_Address', field: 'caddress',cellStyle: {
        
                     color: 'white'
                 }, },
-      { title: 'PRODUCT_ID', field: 'id', type: 'numeric',cellStyle: {
+      { title: 'Product_Id', field: 'id', type: 'numeric',cellStyle: {
        
                   color: 'white'
               }, },
-      { title: 'PRODUCT_NAME', field: 'product',cellStyle: {
+      { title: 'Product_Name', field: 'product',cellStyle: {
        
                     color: 'white'
                 }, },
-      { title: 'ORDERED_QTY', field: 'qty',type:'numeric',cellStyle: {
+      { title: 'Ordered_Qty', field: 'qty',type:'numeric',cellStyle: {
     
                     color: 'white'
                 }, },
-      { title: 'ORDER_STATUS', field: 'ostatus',cellStyle: {
+      { title: 'Order_Status', field: 'ostatus',cellStyle: {
     
                   color: 'white'
               }, },
