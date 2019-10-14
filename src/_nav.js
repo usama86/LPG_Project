@@ -42,11 +42,36 @@ export default {
 		//url: '/base',
 		//icon: 'icon-puzzle',
 		//children: [
+<<<<<<< Updated upstream
+=======
+	
+		
+   // {
+     // name: 'Base',
+      //url: '/base',
+      //icon: 'icon-puzzle',
+      //children: [
+       
+      /*{
+
+          name: 'Cards',
+          url: '/base/cards',
+
+		// {
+		// name: 'Base',
+		//url: '/base',
+		//icon: 'icon-puzzle',
+		//children: [*/
+>>>>>>> Stashed changes
 		{
 			name: 'Sales',
 			url: '/admin/sales',
 			icon: 'icon-wallet'
 		},
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 		{
           name: 'Transactions',
           url: '/admin/transactions',
