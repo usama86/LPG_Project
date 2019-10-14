@@ -36,7 +36,7 @@ export default {
         attributes: {},
       },
     },*/
-<<<<<<< HEAD
+
 		// {
 		// name: 'Base',
 		//url: '/base',
@@ -47,9 +47,7 @@ export default {
 			url: '/admin/sales',
 			icon: 'icon-wallet'
 		},
-		/*{
-=======
-<<<<<<< Updated upstream
+		
    // {
      // name: 'Base',
       //url: '/base',
@@ -60,25 +58,25 @@ export default {
           url: '/admin/sales',
           icon: 'icon-wallet',
         },
-        /*{
->>>>>>> ahsan1
+      /*{
+
           name: 'Cards',
           url: '/base/cards',
-=======
+
 		// {
 		// name: 'Base',
 		//url: '/base',
 		//icon: 'icon-puzzle',
-		//children: [
+		//children: [*/
 		{
 			name: 'Sales',
 			url: '/admin/sales',
 			icon: 'icon-wallet'
 		},
+
 		{
           name: 'Transactions',
           url: '/admin/transactions',
->>>>>>> Stashed changes
           icon: 'icon-puzzle',
         },
        /* {
@@ -220,6 +218,7 @@ export default {
         },
       ],
     },*/
+
 		{
 			name: 'Notifications',
 			url: '/notifications',
