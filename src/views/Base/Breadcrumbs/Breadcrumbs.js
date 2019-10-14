@@ -1,13 +1,7 @@
 import React, { Component } from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Col, Row } from 'reactstrap';
-import MaterialTable from 'material-table'
-import  '../../Theme/Colors/Colors.css'
-
-
-
-
-
-
+import MaterialTable from 'material-table';
+import '../../Theme/Colors/Colors.css';
 
 class Breadcrumbs extends Component {
 
