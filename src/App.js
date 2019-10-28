@@ -12,8 +12,16 @@ const DefaultLayout = React.lazy(() => import('./containers/DefaultLayout'));
 const Login = React.lazy(() => import('./views/Pages/Login'));
 const Register = React.lazy(() => import('./views/Pages/Register'));
 const Customer = React.lazy(() => import('./views/Pages/Customer'));
+const Cust = React.lazy(() => import('./views/Pages/Customer/react-js-quick-food-delivery-website-master/src/App'));
 const Page500 = React.lazy(() => import('./views/Pages/Page500'));
+/*
 
+	"@fortawesome/fontawesome-svg-core": "^1.2.19",
+		"@fortawesome/free-brands-svg-icons": "^5.9.0",
+		"@fortawesome/free-solid-svg-icons": "^5.9.0",
+		"@fortawesome/react-fontawesome": "^0.1.4",
+
+*/
 class App extends Component {
 	render() {
 		return (
@@ -31,7 +39,7 @@ class App extends Component {
 							exact
 							path="/CustomerPanel"
 							name="Page Customer Panel"
-							render={(props) => <Customer {...props} />}
+							render={(props) => <Cust {...props} />}
 						/>
 						<Route exact path="/500" name="Page 500" render={(props) => <Page500 {...props} />} />
 						<Route path="/" name="Home" render={(props) => <DefaultLayout {...props} />} />
