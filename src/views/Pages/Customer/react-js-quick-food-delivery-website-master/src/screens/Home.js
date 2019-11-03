@@ -473,12 +473,12 @@ Safe working environments ensure employee safety and productivity, be it at indu
             </div>
           </div>
         </div>
-        <div>
+        {/* <div>
         <Carousel
         showThumbs={false}
         infiniteLoop={true}
         width={'100%'}
-      
+     
         >
 
                 <div>
@@ -494,23 +494,232 @@ Safe working environments ensure employee safety and productivity, be it at indu
                     <p className="legend">Legend 3</p>
                 </div>
             </Carousel>
-     </div>
+     </div> */}
           
 
+  <section class="my-5" style={{padding:'10%',backgroundColor:'#282C35'}} >
+                   
+                   <h2 style={{color:'white'}} class="h1-responsive font-weight-bold text-center my-5">Our Best Projects</h2>
+
+                   <p style={{color:'white'}} class="grey-text text-center w-responsive mx-auto mb-5">Duis aute irure dolor in reprehenderit in
+                   voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                   proident, sunt in culpa qui officia deserunt mollit est laborum.</p>
+
+               
 
 
 
-
-     
-
-
-	
+               <div class="row">
 
 
+               <div class="col-lg-5 mb-lg-0 mb-5">
+               
+                   <img src="https://mdbootstrap.com/img/Photos/Others/images/83.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1"/>
+               </div>
+
+               <div class="col-lg-7">
 
 
+                   <div class="row mb-3">
+                           <div class="col-md-1 col-2">
+                               <i style={{color:'#fbc100'}}  class="fas fa-book fa-2x"></i>
+                               {/* <i class="fab fa-accessible-icon"></i> */}
+                           </div>
+                           <div class="col-md-11 col-10">
+                               <h5 style={{color:'white'}} class="font-weight-bold mb-3">Education</h5>
+                               <p style={{color:'white'}} class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores nam,
+                               aperiam minima elit assumenda voluptate velit.</p>
+                           </div>
+                   </div>
+               
+                   <div class="row mb-3">
+                           <div class="col-md-1 col-2">
+                               <i style={{color:'#fbc100'}}   class="fas fa-code fa-2x"></i>
+                           </div>
+                           <div class="col-md-11 col-10">
+                               <h5 style={{color:'white'}} class="font-weight-bold mb-3">Technology</h5>
+                               <p style={{color:'white'}} class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores nam,
+                               aperiam minima elit assumenda voluptate velit.</p>
+                           </div>
+                   </div>
 
-        
+                   <div class="row">
+                           <div class="col-md-1 col-2">
+                               <i style={{color:'#fbc100'}}   class="far fa-money-bill-alt fa-2x"></i>
+                           </div>
+                           <div class="col-md-11 col-10">
+                               <h5 style={{color:'white'}} class="font-weight-bold mb-3">Finance</h5>
+                               <p style={{color:'white'}} class="grey-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores
+                               nam, aperiam minima elit assumenda voluptate velit.</p>
+                           </div>
+                   </div>
+               
+
+               </div>
+
+
+               </div>
+
+
+           
+
+
+               <div class="row">
+
+
+               <div class="col-lg-7">
+
+
+                   <div class="row mb-3">
+                   <div class="col-md-1 col-2">
+                       <i style={{color:'#fbc100'}}  class="far fa-chart-bar fa-2x"></i>
+                   </div>
+                   <div class="col-md-11 col-10">
+                       <h5 style={{color:'white'}} class="font-weight-bold mb-3">Marketing</h5>
+                       <p  style={{color:'white'}} class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores nam,
+                       aperiam minima elit assumenda voluptate velit.</p>
+                   </div>
+                   </div>
+               
+                   <div class="row mb-3">
+                   <div class="col-md-1 col-2">
+                       <i  style={{color:'#fbc100'}}   class="fas fa-music fa-2x"></i>
+                   </div>
+                   <div class="col-md-11 col-10">
+                       <h5 style={{color:'white'}} class="font-weight-bold mb-3">Entertainment</h5>
+                       <p style={{color:'white'}} class="grey-text">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores nam,
+                       aperiam minima elit assumenda voluptate velit.</p>
+                   </div>
+                   </div>
+               
+                   <div class="row mb-lg-0 mb-5">
+                   <div class="col-md-1 col-2">
+                       <i style={{color:'#fbc100'}}  class="far fa-grin fa-2x"></i>
+                   </div>
+                   <div class="col-md-11 col-10">
+                       <h5 style={{color:'white'}} class="font-weight-bold mb-3">Communication</h5>
+                       <p style={{color:'white'}}class="grey-text mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing. Reprehenderit maiores
+                       nam, aperiam minima elit assumenda voluptate velit.</p>
+                   </div>
+                   </div>
+               
+
+               </div>
+
+                       <div class="col-lg-5">
+                           
+                           <img src="https://mdbootstrap.com/img/Photos/Others/images/82.jpg" alt="Sample project image" class="img-fluid rounded z-depth-1"/>
+                       </div>
+
+
+               </div>
+
+               
+
+</section>
+
+
+<section id="what-we-do">
+		<div class="container-fluid">
+			<h2 class="section-title mb-2 h1">Our Services</h2>
+			<p class="text-center text-muted h5">Having and managing a correct marketing strategy is crucial in a fast moving market.</p>
+			<div class="row mt-5">
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-1">
+							<h3 class="card-title">PIPELINE INSTALLATION</h3>
+							<p class="card-text">High pressure gas pipeline installation</p>
+							<a href="javascript:void();" title="Read more" class="read-more" >Read more<i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-2">
+							<h3 class="card-title">MAINTENANCE</h3>
+							<p class="card-text">Pipleline Maintenance</p>
+							<a href="javascript:void();" title="Read more" class="read-more" >Read more<i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-3">
+							<h3 class="card-title">Boring</h3>
+							<p class="card-text">Road Boring</p>
+							<a href="javascript:void();" title="Read more" class="read-more" >Read more<i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-4">
+							<h3 class="card-title">Fusion/Jointing mdpe and hdpe pipe</h3>
+							<p class="card-text">Fusion/Jointing mdpe and hdpe pipe</p>
+							<a href="javascript:void();" title="Read more" class="read-more" >Read more<i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-5">
+							<h3 class="card-title">X-ray</h3>
+							<p class="card-text">X-RAY welding of ms pipe, ss pipe and se</p>
+							<a href="javascript:void();" title="Read more" class="read-more" >Read more<i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-6">
+							<h3 class="card-title">Fire fighting pipeline installation</h3>
+							<p class="card-text">Fire fighting pipeline installation</p>
+							<a href="javascript:void();" title="Read more" class="read-more" >Read more<i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-6">
+							<h3 class="card-title">Low pressure gas pipleline installation</h3>
+							<p class="card-text">Low pressure gas pipleline installation</p>
+							<a href="javascript:void();" title="Read more" class="read-more" >Read more<i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-6">
+							<h3 class="card-title">Ditching back filling and reinsatement</h3>
+							<p class="card-text">Ditching back filling and reinsatement</p>
+							<a href="javascript:void();" title="Read more" class="read-more" >Read more<i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-6">
+							<h3 class="card-title">Testing</h3>
+							<p class="card-text">Testing</p>
+							<a href="javascript:void();" title="Read more" class="read-more" >Read more<i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+        <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 col-xl-4">
+					<div class="card">
+						<div class="card-block block-6">
+							<h3 class="card-title">Road Cutting</h3>
+							<p class="card-text">Road Cutting</p>
+							<a href="javascript:void();" title="Read more" class="read-more" >Read more<i class="fa fa-angle-double-right ml-2"></i></a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>	
+	</section>
 
 
         {/* Home Footer */}

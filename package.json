@@ -36,7 +36,7 @@
 		"react-bootstrap": "^1.0.0-beta.9",
 		"react-chartjs-2": "^2.8.0",
 		"react-dom": "^16.10.2",
-		"react-icons": "^3.7.0",
+		"react-icons": "^3.8.0",
 		"react-redux": "^7.0.3",
 		"react-responsive-carousel": "^3.1.51",
 		"react-router-config": "^5.1.1",
