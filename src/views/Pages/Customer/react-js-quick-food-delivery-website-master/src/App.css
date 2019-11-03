@@ -1,4 +1,48 @@
 
+
+.carousel-item.active, .carousel-item-next, .carousel-item-prev{
+ height:450px;
+}
+#myBtn{
+  font-weight:bold !important;
+  color:#fbc100;
+  cursor:pointer;
+}
+#showless{
+   font-weight:bold !important;
+  color:#fbc100;
+  cursor:pointer;
+}
+#myBtn2{
+  font-weight:bold !important;
+  color:#fbc100;
+  cursor:pointer;
+}
+#showless2{
+   font-weight:bold !important;
+  color:#fbc100;
+  cursor:pointer;
+}
+#myBtn3{
+  font-weight:bold !important;
+  color:#fbc100;
+  cursor:pointer;
+}
+#showless3{
+   font-weight:bold !important;
+  color:#fbc100;
+  cursor:pointer;
+}
+#myBtn4{
+  font-weight:bold !important;
+  color:#fbc100;
+  cursor:pointer;
+}
+#showless4{
+   font-weight:bold !important;
+  color:#fbc100;
+  cursor:pointer;
+}
 .bg-warning{
   background-color: #eb6825 !important;
 }
