@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { FaPhone,FaEnvelope } from "react-icons/fa";
 
 class Footer extends Component {
-    render() {
+    render() { 
         return (
             // Complete Footer Section
             <div className="container-fluid pt-5 bg-footer">
@@ -137,7 +137,7 @@ class Footer extends Component {
                 {/* Footer Copyright Section */}
                 <div className="container">
                     <div className="col-12 footer-copyright">
-                        <p>© 2019 Smart Gas. All Rights Reserved. Powered By <span style={{ color: "#eb6825", fontWeight: 700 }}>Futuristic Developer</span></p>
+                        <p>© 2019 Smart Gas. All Rights Reserved. Powered By <span style={{ color: "#ffc107", fontWeight: 700 }}>Futuristic Developer</span></p>
                     </div>
                 </div>
             </div>
