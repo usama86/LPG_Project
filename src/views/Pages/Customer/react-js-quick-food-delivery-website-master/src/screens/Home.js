@@ -131,8 +131,8 @@ class Home extends Component {
                 </div>
               </div>
               <div className="container text-white text-center mt-4">
-                <div className="col-lg-7 col-md-8 col-sm-12 mx-auto">
-                  <img style={{ width: "95%" }} alt="" src={require("../assets/images/options-img.png")} />
+               <div className="col-lg-7 col-md-8 col-sm-12 mx-auto">
+                  <img style={{ width: "95%" }} alt="" src={require("../assets/images/options-img1.png")} />
                 </div>
               </div>
             </div>
