@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import axios from '../../../../../../config';
 // import Navbar from '../components/Navbar';
 import Navbar2 from '../components/Navbar2';
 import Footer from '../components/Footer';
@@ -10,6 +11,7 @@ export default class Login extends Component {
     constructor() {
         super()
         this.state = {
+            loading: false,
             isRegisterForm: false,
             registerFormError: "",
             userProfileImageLable: "Choose image",
@@ -308,38 +310,69 @@ export default class Login extends Component {
     }
 
     async handleLoginNowBtn(){
+        this.setState({loading : true})
+
         const { userLoginEmail, userLoginPassword } = this.state;
         const userLoginDetails = {
             userLoginEmail: userLoginEmail,
             userLoginPassword: userLoginPassword,
             propsHistory: this.props.history,
         }
-        try {
-       //     const LoginReturn = await logIn(userLoginDetails)
-            // console.log(LoginReturn)
-            if(userLoginEmail==='usama@gmail.com')
-            {
+
+        axios.post('/login', {
+            email: userLoginEmail,
+            password: userLoginPassword
+        }).then(res => {
+            localStorage.setItem('token', res.data.tokenData);
+            if (res.data.user.role === 'distributor') {
+                this.setState({loading:false})
+                localStorage.setItem('UserType', 'Vendor');
+                window.location.href='/#/distributor/dashboard'
+                
+            }
+
+            if (res.data.user.role === 'admin') {
+                this.setState({loading:false})
+                localStorage.setItem('UserType', 'Admin');   
+                window.location.href='/#/dashboard'
+            }
+
+            if (res.data.user.role === 'customer') {
+                this.setState({loading:false})
                 this.props.history.push('/');
                 localStorage.setItem('UserType', 'Customer');
-            }
-            else if(userLoginEmail==='ahsan@gmail.com')
-            {
-                localStorage.setItem('UserType', 'Vendor');
-                window.location.href='/#/distributor/dashboard' 
-                
-
-            }
-            else if(userLoginEmail==='rafay@gmail.com')
-            {
-                //this.props.history.push('/dashboard');
-                localStorage.setItem('UserType', 'Admin');
-                window.location.href='/#/dashboard' 
                 
             }
+        }).catch(err => {
+            console.log(err);
+            this.setState({loading:false})})
 
-        }catch(error){
-            console.log("Error in Login => ",error)
-        }
+    //     try {
+    //    //     const LoginReturn = await logIn(userLoginDetails)
+    //         // console.log(LoginReturn)
+    //         if(userLoginEmail==='usama@gmail.com')
+    //         {
+    //             this.props.history.push('/');
+    //             localStorage.setItem('UserType', 'Customer');
+    //         }
+    //         else if(userLoginEmail==='ahsan@gmail.com')
+    //         {
+    //             localStorage.setItem('UserType', 'Vendor');
+    //             window.location.href='/#/distributor/dashboard' 
+                
+
+    //         }
+    //         else if(userLoginEmail==='rafay@gmail.com')
+    //         {
+    //             //this.props.history.push('/dashboard');
+    //             localStorage.setItem('UserType', 'Admin');
+    //             window.location.href='/#/dashboard' 
+                
+    //         }
+
+    //     }catch(error){
+    //         console.log("Error in Login => ",error)
+    //     }
     }
 
     render() {
@@ -432,7 +465,7 @@ export default class Login extends Component {
                                     <label htmlFor="userLoginPassword">Password</label>
                                     <input type="password" className="form-control" id="userLoginPassword" placeholder="Password" onChange={(e) => this.setState({userLoginPassword: e.target.value})} />
                                 </div>
-                                <button type="submit" className="btn btn-warning text-uppercase mb-3" onClick={this.handleLoginNowBtn}><b>Login Now</b></button>
+                                <button type="submit" className="btn btn-warning text-uppercase mb-3" disabled={this.state.loading} onClick={this.handleLoginNowBtn}><b>Login Now</b></button>
                             </form>
                             <p className="m-0">Don't have an account yet? <span className="cursor-pointer text-warning" onClick={this.handleForms}>Create an Account</span></p>
                         </div>
