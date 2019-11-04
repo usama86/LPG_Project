@@ -145,8 +145,8 @@ class Navbar2 extends Component {
 					<Link className="navbar-brand" to={homeIconLink}>
 						<img
 							alt="Quick Food Logo"
-							style={{ width: '166px' }}
-							src={require('../assets/images/logo1.png')}
+							style={{ width: '80px' }}
+							src={require('../assets/images/new-logo.jpg')}
 						/>
 					</Link>
 				</Navbar.Brand>

@@ -296,6 +296,8 @@ export default class Login extends Component {
                 propsHistory: this.props.history,
                 typeOfFood: [],
             }
+            console.log(userDetails);
+            return;
             try {
                 const signUpReturn = await signUp(userDetails)
                 // console.log(signUpReturn)
