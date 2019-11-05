@@ -22,7 +22,7 @@ class Restaurants extends Component {
             renderRestaurantList: true,
             renderCategorizedRestaurants: false,
             renderSearchRestaurants: false,
-            cityName:''
+            cityName:'Pakistan'
         }
         this.handleCategoriesCheckbox = this.handleCategoriesCheckbox.bind(this);
         this.handleSearchBar = this.handleSearchBar.bind(this);

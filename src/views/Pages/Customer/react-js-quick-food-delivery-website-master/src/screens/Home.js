@@ -293,7 +293,7 @@ class Home extends Component {
                 <div className="container res-shadow res-border">
                   <div style={{ backgroundColor:'white' }} className="row p-3">
                     <div className="col-lg-4 col-md-4 col-sm-12 text-center border p-2">
-                      <img style={{ width: "70%" }} alt="Natural Healthy Food" src={require("../assets/images/listing-logo03.png")} />
+                      <img style={{ width: "70%" }} alt="Natural Healthy Food" src={require("../assets/images/l1.jpg")} />
                     </div>
                     <div style={{ position: "relative",}} className="col-lg-8 col-md-8 col-sm-12 py-2">
                       <h5  className="mb-1">Natural Healthy Distributor</h5>
@@ -318,7 +318,7 @@ class Home extends Component {
                 <div className="container res-shadow res-border">
                   <div style={{ backgroundColor:'white' }}  className="row p-3">
                     <div className="col-lg-4 col-md-4 col-sm-12 text-center border p-2">
-                      <img style={{ width: "70%" }} alt="Menu & Drinks" src={require("../assets/images/listing-logo09.png")} />
+                      <img style={{ width: "70%" }} alt="Menu & Drinks" src={require("../assets/images/l2.png")} />
                     </div>
                     <div style={{ position: "relative" }} className="col-lg-8 col-md-8 col-sm-12 py-2">
                       <h5 className="mb-1">Cool &amp; LPG</h5>
@@ -343,7 +343,7 @@ class Home extends Component {
                 <div className="container res-shadow res-border">
                   <div style={{ backgroundColor:'white' }} className="row p-3">
                     <div  className="col-lg-4 col-md-4 col-sm-12 text-center border p-2">
-                      <img style={{ width: "70%" }} alt="Chefs" src={require("../assets/images/listing-logo12.png")} />
+                      <img style={{ width: "70%" }} alt="Chefs" src={require("../assets/images/l3.jpeg")} />
                     </div>
                     <div style={{ position: "relative" }} className="col-lg-8 col-md-8 col-sm-12 py-2">
                       <h5  className="mb-1">LPGs</h5>
@@ -368,7 +368,7 @@ class Home extends Component {
                 <div className="container res-shadow res-border">
                   <div style={{ backgroundColor:'white' }} className="row p-3">
                     <div className="col-lg-4 col-md-4 col-sm-12 text-center border p-2">
-                      <img style={{ width: "70%" }} alt="Menu's" src={require("../assets/images/listing-logo15.png")} />
+                      <img style={{ width: "70%" }} alt="Menu's" src={require("../assets/images/l4.jpg")} />
                     </div>
                     <div style={{ position: "relative" }} className="col-lg-8 col-md-8 col-sm-12 py-2">
                       <h5  className="mb-1">LPG's</h5>
@@ -393,7 +393,7 @@ class Home extends Component {
                 <div className="container res-shadow res-border">
                   <div style={{ backgroundColor:'white' }} className="row p-3">
                     <div className="col-lg-4 col-md-4 col-sm-12 text-center border p-2">
-                      <img style={{ width: "70%" }} alt="Food N&H" src={require("../assets/images/2.png")} />
+                      <img style={{ width: "70%" }} alt="Food N&H" src={require("../assets/images/l5.png")} />
                     </div>
                     <div style={{ position: "relative" }} className="col-lg-8 col-md-8 col-sm-12 py-2">
                       <h5  className="mb-1">LPG N&amp;GAS</h5>
@@ -418,7 +418,7 @@ class Home extends Component {
                 <div className="container res-shadow res-border">
                   <div style={{ backgroundColor:'white' }} className="row p-3">
                     <div className="col-lg-4 col-md-4 col-sm-12 text-center border p-2">
-                      <img style={{ width: "70%" }} alt="Restaurant" src={require("../assets/images/listing-logo13.png")} />
+                      <img style={{ width: "70%" }} alt="Restaurant" src={require("../assets/images/l6.jpg")} />
                     </div>
                     <div style={{ position: "relative" }} className="col-lg-8 col-md-8 col-sm-12 py-2">
                       <h5  className="mb-1">Distributor</h5>
