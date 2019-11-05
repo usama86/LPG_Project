@@ -7,7 +7,8 @@ import '../App.css'
 import { FaHeart } from "react-icons/fa";
 import { Rating } from '@material-ui/lab';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import Popup from "reactjs-popup";
+
 /*
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 */
@@ -16,6 +17,12 @@ class Home extends Component {
     super()
     this.state = {
       homeSearchBarText: "",
+      gotdata:[
+        {id:1,name:'Rawalpindi'},
+        {id:2,name:'Islamabad'},
+        {id:3,name:'Lahore'},
+        {id:4,name:'Karachi'},
+      ]
     }
     this.handleSearchBar = this.handleSearchBar.bind(this);
   }
@@ -99,15 +106,36 @@ class Home extends Component {
       LessBtn.style.display = "inline";
     }
   }
-  handleSearchBar() {
+  handleSearchBar(event,name) {
+  //  var x=name;
+  //  const { homeSearchBarText } = this.state
+  //  if (homeSearchBarText) {
+ //     this.props.history.push('/distributors', this.state.homeSearchBarText)
+//    }
+  
+    var x=name;
+    console.log(x);
     const { homeSearchBarText } = this.state
-    if (homeSearchBarText) {
-      this.props.history.push('/restaurants', this.state.homeSearchBarText)
+    if(x===undefined)
+    {
+      if (homeSearchBarText) {
+
+        localStorage.setItem('City', this.state.homeSearchBarText);
+        this.props.history.push('/distributors', this.state.homeSearchBarText)
+      }
     }
+    else{
+      localStorage.setItem('City',x);
+      this.setState({homeSearchBarText:x})
+      this.props.history.push('/distributors', this.state.homeSearchBarText)
+    }
+
+
+  
   }
 
   handleOrderNowBtn(){
-    this.props.history.push('/restaurants')
+    this.props.history.push('/distributors')
   }
 
   render() {
@@ -123,7 +151,30 @@ class Home extends Component {
               <div className="container">
                 <div className="row justify-content-center">
                   <div className="col-lg-6 col-md-6 col-sm-12 mb-3">
-                    <input type="text" className="form-control text-uppercase" id="searchText" placeholder="Distributor Name" onChange={(e) => { this.setState({ homeSearchBarText: e.target.value }) }} />
+                    
+                      <Popup trigger={ <input type="text" className="form-control text-uppercase" autoComplete='off' id="searchText" placeholder="Enter your City Name here." onChange={(e) => { this.setState({ homeSearchBarText: e.target.value }) }} />  } 
+                                                    position="bottom center"    >
+                                                        
+                                                    {this.state.gotdata.map(print => {
+
+                                                                    return (  <div  key={print.id} style={{cursor:'pointer'}} onClick = {(event)=>{this.handleSearchBar(event,print.name)}} className='citySuggDiv' >
+                                                                                                                                
+                                                                            {print.name} &nbsp;       
+                                                                                                
+                                                                            </div>)
+                                                                    }
+
+
+
+                                                                    )}
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    
+                                                    </Popup>
                   </div>
                   <div className="col-lg-2 col-md-2 col-sm-12">
                     <button type="button" className="btn btn-warning mb-2 text-uppercase btn-block rounded-0" onClick={this.handleSearchBar}><b>Search</b></button>
@@ -497,7 +548,14 @@ Safe working environments ensure employee safety and productivity, be it at indu
      </div> */}
           
 
-  <section class="my-5" style={{padding:'10%',backgroundColor:'#282C35'}} >
+  <section class="my-5" style={{
+    paddingTop: '5%',
+    paddingLeft: '10%',
+    paddingRight: '10%',
+    backgroundColor:'#282C35'
+
+
+}} >
                    
                    <h2 style={{color:'white'}} class="h1-responsive font-weight-bold text-center my-5">Our Best Projects</h2>
 
@@ -564,7 +622,7 @@ Safe working environments ensure employee safety and productivity, be it at indu
            
 
 
-               <div class="row">
+               <div class="row" style={{marginTop:'75px'}}>
 
 
                <div class="col-lg-7">

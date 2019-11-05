@@ -22,12 +22,16 @@ class Restaurants extends Component {
             renderRestaurantList: true,
             renderCategorizedRestaurants: false,
             renderSearchRestaurants: false,
+            cityName:''
         }
         this.handleCategoriesCheckbox = this.handleCategoriesCheckbox.bind(this);
         this.handleSearchBar = this.handleSearchBar.bind(this);
     }
 
     async componentDidMount() {
+        var x=localStorage.getItem('City');
+        this.setState({cityName:x})
+        console.log(x);
         this.props.restaurant_list();
         const { state } = this.props.location
         if (state) {
@@ -302,7 +306,7 @@ class Restaurants extends Component {
                                 </div>
                             </div>
                             <div className="col-lg-7 col-md-7 col-sm-12">
-                                <h4 className="mb-3">Distributor's Found</h4>
+                                <h4 className="mb-3">{this.state.cityName}'s Distributor Found</h4>
                                 <div className="container px-0">
                                     <div className="col-lg-12 col-md-12 col-sm-12 mb-4 px-0">
                                         {renderSearchRestaurants && this._renderSearchRestaurants()}
