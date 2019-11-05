@@ -157,6 +157,7 @@ class Restaurants extends Component {
         const { restaurantList } = this.props;
         const { categories, } = this.state;
         if (restaurantList) {
+            
             return Object.keys(restaurantList).map((val) => {
                 return restaurantList[val].typeOfFood.map((e1) => {
                     return categories.map((e2) => {

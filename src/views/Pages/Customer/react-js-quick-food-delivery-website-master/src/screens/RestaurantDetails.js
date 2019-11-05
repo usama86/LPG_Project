@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 import firebase from '../config/firebase';
 import { connect } from 'react-redux';
 import { orderNow } from '../config/firebase';
+import { my_foods } from '../store/action';
 import Swal from 'sweetalert2'
 import { FaPlusCircle,FaInfoCircle} from "react-icons/fa"; 
 import { IoMdBasket } from "react-icons/io";
@@ -32,8 +33,8 @@ class RestaurantDetails extends Component {
     }
 
     async componentDidMount() {
-        const { state } = await this.props.location
-        this.fetchMenuItems()
+        const { state } = await this.props.location;
+        this.fetchMenuItems();
         if (state) {
             this.setState({
                 resDetails: state,
@@ -370,7 +371,8 @@ class RestaurantDetails extends Component {
 const mapStateToProps = state => {
     return {
         user: state.user,
+        items: state.myFoods
     }
 }
 
-export default connect(mapStateToProps, null)(RestaurantDetails);
+export default connect(mapStateToProps, {my_foods})(RestaurantDetails);
