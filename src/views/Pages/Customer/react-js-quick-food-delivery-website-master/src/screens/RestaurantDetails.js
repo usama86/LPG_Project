@@ -12,6 +12,11 @@ import { IoMdBasket } from "react-icons/io";
 import { GiSplitCross,GiFuelTank } from "react-icons/gi";
 import { MdRateReview } from "react-icons/md";
 
+import Lp1 from '../assets/images/l1.jpg'
+import Lp2 from '../assets/images/l2.png'
+import Lp3 from '../assets/images/l3.jpeg'
+import Lp4 from '../assets/images/l4.jpg'
+
 import '../App.css'
 /*
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -177,6 +182,55 @@ class RestaurantDetails extends Component {
     _renderMenuItemsList() {
         const { menuItemsList } = this.state;
         if (menuItemsList) {
+            return (
+                <div>
+                <div className="container border-bottom pb-2 px-lg-0 px-md-0 mb-4" key={Math.random()}>
+                    <div className="row">
+                        <div className="col-lg-2 col-md-3 col-8 offset-2 offset-lg-0 offset-md-0 px-0 mb-3 text-center">
+                            <img style={{ width: "70px", height: "70px" }} alt="Natural Healthy Food" src={Lp1} />
+                        </div>
+                        <div className="col-lg-7 col-md-6 col-sm-12 px-0">
+                            <h6 className="">LPG & GAS</h6>
+                            <p className=""><small>It is a long established fact that a reader</small></p>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
+                            <span className="mx-3">RS. 65</span>
+                            <span className="menuItemsListAddBtn"  ><FaPlusCircle icon="plus" className="text-warning" /></span>
+                        </div>
+                    </div>
+                </div>
+                <div className="container border-bottom pb-2 px-lg-0 px-md-0 mb-4" key={Math.random()}>
+                    <div className="row">
+                        <div className="col-lg-2 col-md-3 col-8 offset-2 offset-lg-0 offset-md-0 px-0 mb-3 text-center">
+                            <img style={{ width: "70px", height: "70px" }} alt="Natural Healthy Food" src={Lp2} />
+                        </div>
+                        <div className="col-lg-7 col-md-6 col-sm-12 px-0">
+                            <h6 className="">LPG & GAS</h6>
+                            <p className=""><small>It is a long established fact that a reader</small></p>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
+                            <span className="mx-3">RS. 85</span>
+                            <span className="menuItemsListAddBtn"  ><FaPlusCircle icon="plus" className="text-warning" /></span>
+                        </div>
+                    </div>
+                </div>
+                <div className="container border-bottom pb-2 px-lg-0 px-md-0 mb-4" key={Math.random()}>
+                    <div className="row">
+                        <div className="col-lg-2 col-md-3 col-8 offset-2 offset-lg-0 offset-md-0 px-0 mb-3 text-center">
+                            <img style={{ width: "70px", height: "70px" }} alt="Natural Healthy Food" src={Lp3} />
+                        </div>
+                        <div className="col-lg-7 col-md-6 col-sm-12 px-0">
+                            <h6 className="">LPG & GAS</h6>
+                            <p className=""><small>It is a long established fact that a reader</small></p>
+                        </div>
+                        <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
+                            <span className="mx-3">RS. 50</span>
+                            <span className="menuItemsListAddBtn"  ><FaPlusCircle icon="plus" className="text-warning" /></span>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            )
             return Object.keys(menuItemsList).map((val) => {
                 return (
                     <div className="container border-bottom pb-2 px-lg-0 px-md-0 mb-4" key={menuItemsList[val].id}>
@@ -231,11 +285,11 @@ class RestaurantDetails extends Component {
                             <div className="container">
                                 <div className="row">
                                     <div className="col-lg-2 col-md-3 col-6 text-lg-center text-md-center pr-0 mb-2">
-                                        <img className="p-2 bg-white rounded text-center" alt="Natural Healthy Food" style={{ width: "60%" }} src={resDetails.userProfileImageUrl} />
+                                        <img className="p-2 bg-white rounded text-center" alt="Natural Healthy Food" style={{ width: "60%" }} src={Lp1} />
                                     </div>
                                     <div className="col-lg-10 col-md-9 col-12 pl-lg-0 pl-md-0">
-                                        <h1 className="restaurant-title">{resDetails.userName}</h1>
-                                        <p className="restaurant-text">{resDetails.typeOfFood.join(', ')}</p>
+                                        <h1 className="restaurant-title">LPG</h1>
+                                        <p className="restaurant-text">Type 1, Type 2 , Type 3</p>
                                     </div>
                                 </div>
                             </div>

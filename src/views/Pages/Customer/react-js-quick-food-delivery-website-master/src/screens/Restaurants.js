@@ -10,6 +10,11 @@ import '../App.css'
 import { FaHeart,FaStar,FaSortAlphaDown,FaThumbsUp } from "react-icons/fa";
 import { Rating } from '@material-ui/lab';
 
+import Lp1 from '../assets/images/l1.jpg'
+import Lp2 from '../assets/images/l2.png'
+import Lp3 from '../assets/images/l3.jpeg'
+import Lp4 from '../assets/images/l4.jpg'
+
 /*
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 */
@@ -120,6 +125,100 @@ class Restaurants extends Component {
     _renderRestaurantList() {
         const { restaurantList } = this.props;
         if (restaurantList) {
+
+            return (
+                <div>
+                <div className="container bg-white p-3 px-0 mb-4" key={Math.random()}>
+                        <div className="row">
+                            <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
+                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={Lp1} />
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12 px-0">
+                                <p>
+                                    <small className="">
+                                    <Rating value={4} readOnly />
+                  
+                                    </small>
+                                    <small>(1) Review</small>
+                                </p>
+                                <h5 className="">Cool & LPG</h5>
+                                <p className=""><small>Type of LPGs: <span>Lpg 1, Lpg 2, Lpg 3</span></small></p>
+                            </div>
+                            <div className="col-lg-3 col-md-3 col-sm-12 py-4 px-0">
+                                <span style={{ display: 'inline-block', textAlign: 'center', borderRadius: '3px', border: '1px solid #dddddd', padding: '6px 7px 0px 7px', marginRight: '16px' }} ><FaHeart icon="heart" className="text-success mr-1" /></span>
+                                <button type="button" onClick={() => this.handleViewMenuBtn(restaurantList[0])} className="btn btn-warning btn-sm text-uppercase" style={{ marginBottom: '8px' }}>View Menu</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="container bg-white p-3 px-0 mb-4" key={Math.random()}>
+                        <div className="row">
+                            <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
+                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={Lp2} />
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12 px-0">
+                                <p>
+                                    <small className="">
+                                    <Rating value={4} readOnly />
+                  
+                                    </small>
+                                    <small>(1) Review</small>
+                                </p>
+                                <h5 className="">Cool & LPG</h5>
+                                <p className=""><small>Type of LPGs: <span>Lpg 1, Lpg 2, Lpg 3</span></small></p>
+                            </div>
+                            <div className="col-lg-3 col-md-3 col-sm-12 py-4 px-0">
+                                <span style={{ display: 'inline-block', textAlign: 'center', borderRadius: '3px', border: '1px solid #dddddd', padding: '6px 7px 0px 7px', marginRight: '16px' }} ><FaHeart icon="heart" className="text-success mr-1" /></span>
+                                <button type="button" onClick={() => this.handleViewMenuBtn(restaurantList[0])} className="btn btn-warning btn-sm text-uppercase" style={{ marginBottom: '8px' }}>View Menu</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="container bg-white p-3 px-0 mb-4" key={Math.random()}>
+                        <div className="row">
+                            <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
+                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={Lp3} />
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12 px-0">
+                                <p>
+                                    <small className="">
+                                    <Rating value={4} readOnly />
+                  
+                                    </small>
+                                    <small>(1) Review</small>
+                                </p>
+                                <h5 className="">Cool & LPG</h5>
+                                <p className=""><small>Type of LPGs: <span>Lpg 1, Lpg 2, Lpg 3</span></small></p>
+                            </div>
+                            <div className="col-lg-3 col-md-3 col-sm-12 py-4 px-0">
+                                <span style={{ display: 'inline-block', textAlign: 'center', borderRadius: '3px', border: '1px solid #dddddd', padding: '6px 7px 0px 7px', marginRight: '16px' }} ><FaHeart icon="heart" className="text-success mr-1" /></span>
+                                <button type="button" onClick={() => this.handleViewMenuBtn(restaurantList[0])} className="btn btn-warning btn-sm text-uppercase" style={{ marginBottom: '8px' }}>View Menu</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="container bg-white p-3 px-0 mb-4" key={Math.random()}>
+                        <div className="row">
+                            <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
+                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={Lp4} />
+                            </div>
+                            <div className="col-lg-6 col-md-6 col-sm-12 px-0">
+                                <p>
+                                    <small className="">
+                                    <Rating value={4} readOnly />
+                  
+                                    </small>
+                                    <small>(1) Review</small>
+                                </p>
+                                <h5 className="">Cool & LPG</h5>
+                                <p className=""><small>Type of LPGs: <span>Lpg 1, Lpg 2, Lpg 3</span></small></p>
+                            </div>
+                            <div className="col-lg-3 col-md-3 col-sm-12 py-4 px-0">
+                                <span style={{ display: 'inline-block', textAlign: 'center', borderRadius: '3px', border: '1px solid #dddddd', padding: '6px 7px 0px 7px', marginRight: '16px' }} ><FaHeart icon="heart" className="text-success mr-1" /></span>
+                                <button type="button" onClick={() => this.handleViewMenuBtn(restaurantList[0])} className="btn btn-warning btn-sm text-uppercase" style={{ marginBottom: '8px' }}>View Menu</button>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    )
+
             return Object.keys(restaurantList).map((val) => {
                 return (
                     <div className="container bg-white p-3 px-0 mb-4" key={restaurantList[val].id}>
