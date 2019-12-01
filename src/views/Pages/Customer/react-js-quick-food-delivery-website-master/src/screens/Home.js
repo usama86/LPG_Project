@@ -282,6 +282,7 @@ class Home extends Component {
         </div>
 
         {/*  Featured Distrubutor section */}
+       {/*
         <div style={{backgroundColor:'#282C35'}} className="container-fluid py-5">
           <div className="py-4">
             <h2 style={{color:'white'}} className="h2 text-uppercase text-center">Featured Distibutors</h2>
@@ -305,7 +306,7 @@ class Home extends Component {
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
-                          <FontAwesomeIcon icon="star" className="rating mr-1" />*/}
+                          <FontAwesomeIcon icon="star" className="rating mr-1" />
                         </small>
                         
                       </p>
@@ -329,7 +330,7 @@ class Home extends Component {
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
-                          <FontAwesomeIcon icon="star" className="rating mr-1" />*/}
+                          <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <Rating value={4} readOnly />
                         </small>
                         
@@ -354,7 +355,7 @@ class Home extends Component {
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
-                          <FontAwesomeIcon icon="star" className="rating mr-1" />*/}
+                          <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <Rating value={4} readOnly />
                         </small>
                         
@@ -379,7 +380,7 @@ class Home extends Component {
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
-                          <FontAwesomeIcon icon="star" className="rating mr-1" />*/}
+                          <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <Rating value={4} readOnly />
                         </small>
                         
@@ -404,7 +405,7 @@ class Home extends Component {
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
-                          <FontAwesomeIcon icon="star" className="rating mr-1" />*/}
+                          <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <Rating value={4} readOnly />
                         </small>
                         
@@ -429,7 +430,7 @@ class Home extends Component {
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <FontAwesomeIcon icon="star" className="rating mr-1" />
-                          <FontAwesomeIcon icon="star" className="rating mr-1" />*/}
+                          <FontAwesomeIcon icon="star" className="rating mr-1" />
                           <Rating value={5} readOnly />
                         </small>
                        
@@ -442,6 +443,8 @@ class Home extends Component {
             </div>
           </div>
         </div>
+
+        */}
 
             {/* Safty Tips*/}
             <div className="container-fluid text-center py-4">

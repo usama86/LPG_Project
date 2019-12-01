@@ -74,7 +74,7 @@ const order_request = () => {
                         type: 'ORDER_REQUEST',
                         orderRequest: orderRequest,
                     })
-                })
+                }) 
             }
         });
     }
