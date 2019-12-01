@@ -302,13 +302,13 @@ export default class RegisterRestaurant extends Component {
                         {/* <Navbar history={this.props.history} /> */}
                         <Navbar2 history={this.props.history} />
                         <div className="container register-cont1-text">
-                            <h1 className="text-uppercase text-white text-center mb-4"><strong>Register User And Add Restaurant</strong></h1>
+                            <h1 className="text-uppercase text-white text-center mb-4"><strong>Register</strong></h1>
                         </div>
                     </div>
                 </div>
                 <div className="container-fluid py-5 bg-light">
                     <div className="col-lg-6 col-md-6 col-sm-12 mx-auto bg-white shadow p-4">
-                        <h2 className="text-center mb-4">Register Restaurant</h2>
+                        <h2 className="text-center mb-4">Register</h2>
                         <form action="javascript:void(0)">
                             <div className="form-row">
                                 <div className="form-group col-md-6">
