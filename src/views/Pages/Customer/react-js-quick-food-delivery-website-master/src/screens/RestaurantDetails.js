@@ -190,8 +190,8 @@ class RestaurantDetails extends Component {
                             <img style={{ width: "70px", height: "70px" }} alt="Natural Healthy Food" src={Lp1} />
                         </div>
                         <div className="col-lg-7 col-md-6 col-sm-12 px-0">
-                            <h6 className="">LPG & GAS</h6>
-                            <p className=""><small>It is a long established fact that a reader</small></p>
+                            <h6 className="">LPG Cylinder</h6>
+                            <p className=""><small>40kg</small></p>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
                             <span className="mx-3">RS. 65</span>
@@ -205,8 +205,8 @@ class RestaurantDetails extends Component {
                             <img style={{ width: "70px", height: "70px" }} alt="Natural Healthy Food" src={Lp2} />
                         </div>
                         <div className="col-lg-7 col-md-6 col-sm-12 px-0">
-                            <h6 className="">LPG & GAS</h6>
-                            <p className=""><small>It is a long established fact that a reader</small></p>
+                            <h6 className="">LPG Cylinder</h6>
+                            <p className=""><small>40kg</small></p>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
                             <span className="mx-3">RS. 85</span>
@@ -220,8 +220,8 @@ class RestaurantDetails extends Component {
                             <img style={{ width: "70px", height: "70px" }} alt="Natural Healthy Food" src={Lp3} />
                         </div>
                         <div className="col-lg-7 col-md-6 col-sm-12 px-0">
-                            <h6 className="">LPG & GAS</h6>
-                            <p className=""><small>It is a long established fact that a reader</small></p>
+                            <h6 className="">LPG Cylinder</h6>
+                            <p className=""><small>40kg</small></p>
                         </div>
                         <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
                             <span className="mx-3">RS. 50</span>
