@@ -9,12 +9,6 @@ import 'bootstrap/dist/css/bootstrap.css';
 import '../App.css'
 import { FaHeart,FaStar,FaSortAlphaDown,FaThumbsUp } from "react-icons/fa";
 import { Rating } from '@material-ui/lab';
-
-import Lp1 from '../assets/images/l1.jpg'
-import Lp2 from '../assets/images/l2.png'
-import Lp3 from '../assets/images/l3.jpeg'
-import Lp4 from '../assets/images/l4.jpg'
-
 /*
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 */
@@ -119,7 +113,7 @@ class Restaurants extends Component {
     }
 
     handleViewMenuBtn(resDetails) {
-        this.props.history.push('/restaurant-details', resDetails)
+        this.props.history.push('/distributor-details', resDetails)
     }
 
     _renderRestaurantList() {
@@ -130,19 +124,21 @@ class Restaurants extends Component {
                 <div>
                 <div className="container bg-white p-3 px-0 mb-4" key={Math.random()}>
                         <div className="row">
+                          
                             <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
-                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={Lp1} />
+                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={require('../assets/images/new-logo.jpg')} />
                             </div>
+                          
                             <div className="col-lg-6 col-md-6 col-sm-12 px-0">
                                 <p>
                                     <small className="">
                                     <Rating value={4} readOnly />
                   
                                     </small>
-                                    <small>(1) Review</small>
+                                  
                                 </p>
-                                <h5 className="">Cool & LPG</h5>
-                                <p className=""><small>Type of LPGs: <span>Lpg 1, Lpg 2, Lpg 3</span></small></p>
+                                <h5 className="">Smart Gas Franchise</h5>
+                                <p className=""><small>Address <span>i-12 Islamabad</span></small></p>
                             </div>
                             <div className="col-lg-3 col-md-3 col-sm-12 py-4 px-0">
                                 <span style={{ display: 'inline-block', textAlign: 'center', borderRadius: '3px', border: '1px solid #dddddd', padding: '6px 7px 0px 7px', marginRight: '16px' }} ><FaHeart icon="heart" className="text-success mr-1" /></span>
@@ -153,7 +149,7 @@ class Restaurants extends Component {
                     <div className="container bg-white p-3 px-0 mb-4" key={Math.random()}>
                         <div className="row">
                             <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
-                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={Lp2} />
+                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={require('../assets/images/new-logo.jpg')} />
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 px-0">
                                 <p>
@@ -161,10 +157,10 @@ class Restaurants extends Component {
                                     <Rating value={4} readOnly />
                   
                                     </small>
-                                    <small>(1) Review</small>
+                                  
                                 </p>
-                                <h5 className="">Cool & LPG</h5>
-                                <p className=""><small>Type of LPGs: <span>Lpg 1, Lpg 2, Lpg 3</span></small></p>
+                                <h5 className="">Smart Gas Franchise</h5>
+                                <p className=""><small>Address: <span>i-10 Islamabad</span></small></p>
                             </div>
                             <div className="col-lg-3 col-md-3 col-sm-12 py-4 px-0">
                                 <span style={{ display: 'inline-block', textAlign: 'center', borderRadius: '3px', border: '1px solid #dddddd', padding: '6px 7px 0px 7px', marginRight: '16px' }} ><FaHeart icon="heart" className="text-success mr-1" /></span>
@@ -175,7 +171,7 @@ class Restaurants extends Component {
                     <div className="container bg-white p-3 px-0 mb-4" key={Math.random()}>
                         <div className="row">
                             <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
-                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={Lp3} />
+                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={require('../assets/images/new-logo.jpg')} />
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 px-0">
                                 <p>
@@ -183,10 +179,10 @@ class Restaurants extends Component {
                                     <Rating value={4} readOnly />
                   
                                     </small>
-                                    <small>(1) Review</small>
+                                  
                                 </p>
-                                <h5 className="">Cool & LPG</h5>
-                                <p className=""><small>Type of LPGs: <span>Lpg 1, Lpg 2, Lpg 3</span></small></p>
+                                <h5 className="">Smart Gas Franchise</h5>
+                                <p className=""><small>Address <span>i-8 Islamabad</span></small></p>
                             </div>
                             <div className="col-lg-3 col-md-3 col-sm-12 py-4 px-0">
                                 <span style={{ display: 'inline-block', textAlign: 'center', borderRadius: '3px', border: '1px solid #dddddd', padding: '6px 7px 0px 7px', marginRight: '16px' }} ><FaHeart icon="heart" className="text-success mr-1" /></span>
@@ -197,7 +193,7 @@ class Restaurants extends Component {
                     <div className="container bg-white p-3 px-0 mb-4" key={Math.random()}>
                         <div className="row">
                             <div className="col-lg-3 col-md-3 col-sm-12 px-0 text-center">
-                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={Lp4} />
+                                <img style={{ width: "70%" }} alt="Natural Healthy Food" src={require('../assets/images/new-logo.jpg')} />
                             </div>
                             <div className="col-lg-6 col-md-6 col-sm-12 px-0">
                                 <p>
@@ -205,10 +201,10 @@ class Restaurants extends Component {
                                     <Rating value={4} readOnly />
                   
                                     </small>
-                                    <small>(1) Review</small>
+                                   
                                 </p>
-                                <h5 className="">Cool & LPG</h5>
-                                <p className=""><small>Type of LPGs: <span>Lpg 1, Lpg 2, Lpg 3</span></small></p>
+                                <h5 className="">Smart Gas Franchise</h5>
+                                <p className=""><small>Address <span>i-9 Islamabad</span></small></p>
                             </div>
                             <div className="col-lg-3 col-md-3 col-sm-12 py-4 px-0">
                                 <span style={{ display: 'inline-block', textAlign: 'center', borderRadius: '3px', border: '1px solid #dddddd', padding: '6px 7px 0px 7px', marginRight: '16px' }} ><FaHeart icon="heart" className="text-success mr-1" /></span>
@@ -239,7 +235,7 @@ class Restaurants extends Component {
                                     <small>(1) Review</small>
                                 </p>
                                 <h5 className="">{restaurantList[val].userName}</h5>
-                                <p className=""><small>Type of LPGs: <span>{restaurantList[val].typeOfFood.join(', ')}</span></small></p>
+                                <p className=""><small>Address <span>{restaurantList[val].typeOfFood.join(', ')}</span></small></p>
                             </div>
                             <div className="col-lg-3 col-md-3 col-sm-12 py-4 px-0">
                                 <span style={{ display: 'inline-block', textAlign: 'center', borderRadius: '3px', border: '1px solid #dddddd', padding: '6px 7px 0px 7px', marginRight: '16px' }} ><FaHeart icon="heart" className="text-success mr-1" /></span>
@@ -361,46 +357,35 @@ class Restaurants extends Component {
                             <div className="col-lg-2 col-md-2 col-sm-12">
                                 <div className="listing-filter">
                                     <div className="filter-heading py-2 mb-3">
-                                        <h6 className="m-0">{/*<FontAwesomeIcon icon="utensils" className="mr-2" />*/}Categories</h6>
+                                        <h6 className="m-0">{/*<FontAwesomeIcon icon="utensils" className="mr-2" />*/}Filter</h6>
                                     </div>
                                     <div>
                                         <ul className="filter-list">
                                             <li>
                                                 <div className="custom-control custom-checkbox">
                                                     <input type="checkbox" className="custom-control-input" id="apple-juice" name="Apple Juice" onChange={this.handleCategoriesCheckbox} />
-                                                    <label className="custom-control-label" htmlFor="apple-juice">LPG Cylinder1</label>
+                                                    <label className="custom-control-label" htmlFor="apple-juice">Composite cylinder</label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div className="custom-control custom-checkbox">
                                                     <input type="checkbox" className="custom-control-input" id="bbq" name="BB.Q" onChange={this.handleCategoriesCheckbox} />
-                                                    <label className="custom-control-label" htmlFor="bbq">LPG Cylinder2</label>
+                                                    <label className="custom-control-label" htmlFor="bbq">Domestic cylinder</label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div className="custom-control custom-checkbox">
                                                     <input type="checkbox" className="custom-control-input" id="beef-roast" name="Beef Roast" onChange={this.handleCategoriesCheckbox} />
-                                                    <label className="custom-control-label" htmlFor="beef-roast">LPG Cylinder3</label>
+                                                    <label className="custom-control-label" htmlFor="beef-roast">Commercial cylinder</label>
                                                 </div>
                                             </li>
                                             <li>
                                                 <div className="custom-control custom-checkbox">
                                                     <input type="checkbox" className="custom-control-input" id="chicken-roast" name="Chicken Roast" onChange={this.handleCategoriesCheckbox} />
-                                                    <label className="custom-control-label" htmlFor="chicken-roast">LPG Cylinder4</label>
+                                                    <label className="custom-control-label" htmlFor="chicken-roast">Industrial cylinder</label>
                                                 </div>
                                             </li>
-                                            <li>
-                                                <div className="custom-control custom-checkbox">
-                                                    <input type="checkbox" className="custom-control-input" id="cheese-burger" name="Cheese Burger" onChange={this.handleCategoriesCheckbox} />
-                                                    <label className="custom-control-label" htmlFor="cheese-burger">LPG Cylinder5</label>
-                                                </div>
-                                            </li>
-                                            <li>
-                                                <div className="custom-control custom-checkbox">
-                                                    <input type="checkbox" className="custom-control-input" id="cold-coffee" name="Cold Coffee" onChange={this.handleCategoriesCheckbox} />
-                                                    <label className="custom-control-label" htmlFor="cold-coffee">LPG Cylinder6</label>
-                                                </div>
-                                            </li>
+                                          
                                         </ul>
                                     </div>
                                 </div>

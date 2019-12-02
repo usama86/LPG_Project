@@ -488,9 +488,9 @@ Safe working environments ensure employee safety and productivity, be it at indu
 
           {/* Apply now section */}
           <div className="container-fluid text-center py-5 home-cont3">
-          <p className="h1 text-uppercase text-white mt-5 mb-3">Apply to become a Smart Gas Franchisee</p>
+          <p className="h1 text-uppercase text-white mt-5 mb-3" >Apply to become a Smart Gas Franchise</p>
           <p className="text-white mb-3">You just have to fill this simple form to grab the opportunity for a long term, sustainable business partnership with the Pakistan  Largest LPG Company.</p>
-          <button type="button" className="btn btn-warning text-uppercase mb-5" onClick={() => this.handleOrderNowBtn()}><b>Apply Now</b></button>
+          <button type="button" className="btn btn-warning text-uppercase mb-5" onClick={()=>{this.props.history.push('/register-restaurant')}}><b>Apply Now</b></button>
         </div>
 
              {/* LPG Types */}

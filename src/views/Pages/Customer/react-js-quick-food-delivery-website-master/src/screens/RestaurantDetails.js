@@ -288,8 +288,8 @@ class RestaurantDetails extends Component {
                                         <img className="p-2 bg-white rounded text-center" alt="Natural Healthy Food" style={{ width: "60%" }} src={Lp1} />
                                     </div>
                                     <div className="col-lg-10 col-md-9 col-12 pl-lg-0 pl-md-0">
-                                        <h1 className="restaurant-title">LPG</h1>
-                                        <p className="restaurant-text">Type 1, Type 2 , Type 3</p>
+                                        <h1 className="restaurant-title">Smart Gas Franchise</h1>
+                                        <p className="restaurant-text">i-12 Islamabad</p>
                                     </div>
                                 </div>
                             </div>
@@ -302,30 +302,21 @@ class RestaurantDetails extends Component {
                             <div className="col-lg-2 col-md-2 col-sm-12">
                                 <div className="listing-category">
                                     <div className="category-heading py-0 mb-1">
-                                        <h6 className="m-0">{/*<FontAwesomeIcon icon="utensils" className="mr-2" />*/}Categories</h6>
+                                        <h6 className="m-0">{/*<FontAwesomeIcon icon="utensils" className="mr-2" />*/}Filter</h6>
                                     </div>
                                     <div>
                                         <ul className="category-list">
                                             <li>
-                                                <p>LPG1</p>
+                                                <p>Composite cylinder</p>
                                             </li>
                                             <li>
-                                                <p>LPG2</p>
+                                                <p>Domestic cylinder</p>
                                             </li>
                                             <li>
-                                                <p>LPG3</p>
+                                                <p>Commercial cylinder</p>
                                             </li>
                                             <li>
-                                                <p>LPG4</p>
-                                            </li>
-                                            <li>
-                                                <p>LPG5</p>
-                                            </li>
-                                            <li>
-                                                <p>LPG6</p>
-                                            </li>
-                                            <li>
-                                                <p>LPG7</p>
+                                                <p>Industrial cylinder</p>
                                             </li>
                                             <li>
                                                 <p>Specials</p>

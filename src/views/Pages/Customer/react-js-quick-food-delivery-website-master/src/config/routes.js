@@ -22,7 +22,7 @@ const MyRoutes = () => (
 			<Route path="/register-restaurant" component={RegisterRestaurant} />
 			<Route path="/login" component={Login} />
 			<Route path="/distributors" component={Restaurants} />
-			<Route path="/restaurant-details" component={RestaurantDetails} />
+			<Route path="/distributor-details" component={RestaurantDetails} />
 			<Route path="/add-menu-items" component={AddMenuItems} />
 			<Route path="/order-requests" component={OrderRequests} />
 			<Route path="/my-orders" component={MyOrders} />

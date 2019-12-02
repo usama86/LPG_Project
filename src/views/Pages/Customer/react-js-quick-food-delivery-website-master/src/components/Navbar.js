@@ -8,7 +8,7 @@ class Navbar extends Component {
 	constructor() {
 		super();
 		this.state = {
-			homeIconLink: '/#/CustomerPanel'
+			homeIconLink: '/#/'
 		};
 		this._renderWithLogin = this._renderWithLogin.bind(this);
 	}

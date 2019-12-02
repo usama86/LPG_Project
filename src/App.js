@@ -37,7 +37,7 @@ class App extends Component {
 						/>
 						<Route
 							exact
-							path="/CustomerPanel"
+							path="/"
 							name="Page Customer Panel"
 							render={(props) => <Cust {...props} />}
 						/>

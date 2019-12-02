@@ -69,7 +69,7 @@ class DefaultLayout extends Component {
 												/>
 											) : null;
 										})}
-										<Redirect from="/" to="/CustomerPanel" />
+										<Redirect from="/" to="/" />
 									</Switch>
 								</Suspense>
 							</Container>
@@ -121,7 +121,7 @@ class DefaultLayout extends Component {
 												/>
 											) : null;
 										})}
-										<Redirect from="/" to="/CustomerPanel" />
+										<Redirect from="/" to="/" />
 									</Switch>
 								</Suspense>
 							</Container>
